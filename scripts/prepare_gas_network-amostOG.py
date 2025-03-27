@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 # SPDX-FileCopyrightText:  PyPSA-Earth and PyPSA-Eur Authors
 #
@@ -41,7 +42,7 @@ if __name__ == "__main__":
         snakemake = mock_snakemake(
             "prepare_gas_network",
             simpl="",
-            clusters="12",
+            clusters="4",
         )
 
     # configure_logging(snakemake)
@@ -569,8 +570,7 @@ def load_bus_region(onshore_path, pipelines):
 
     # Create a new GeoDataFrame containing the merged polygon
     country_borders = gpd.GeoDataFrame(geometry=[country_borders], crs=pipelines.crs)
-    bus_regions_onshore.to_file('bus_regions_onshore.geojson', driver='GeoJSON')
-    country_borders.to_file('country_borders.geojson', driver='GeoJSON')
+
     return bus_regions_onshore, country_borders
 
 

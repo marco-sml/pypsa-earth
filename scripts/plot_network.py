@@ -174,7 +174,8 @@ def plot_map(n, ax=None, attribute="p_nom", opts={}):
         bus_sizes=0,
         # boundaries=map_boundaries,
         color_geomap=True,
-        geomap=False,
+        #geomap=False,
+        geomap=True,
         ax=ax,
     )
     ax.set_aspect("equal")
@@ -1073,13 +1074,24 @@ if __name__ == "__main__":
 
         from _helpers import mock_snakemake
 
+        #snakemake = mock_snakemake(
+        #    "plot_network",
+        #    network="elec",
+        #    simpl="",
+        #    clusters="4",
+        #    ll="c1",
+        #    opts="Co2L-4H",
+        #    attr="p_nom",
+        #    ext="pdf",
+        #)
+
         snakemake = mock_snakemake(
             "plot_network",
             network="elec",
             simpl="",
-            clusters="4",
-            ll="c1",
-            opts="Co2L-4H",
+            clusters="48",
+            ll="copt",
+            opts="Co2L-24H",
             attr="p_nom",
             ext="pdf",
         )
