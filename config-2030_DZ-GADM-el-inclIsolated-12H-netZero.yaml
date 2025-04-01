@@ -983,6 +983,10 @@ plotting:
     high-temp electrolysis: "magenta"
     today: "#D2691E"
     Ambient: "k"
+    battery discharger: slategray # removed by commit a898746 
+    battery charger: slategray # removed by commit a898746 
+    h2 fuel cell: '#c251ae' # removed by commit a898746 
+    h2 electrolysis: '#ff29d9' # removed by commit a898746 
 
 
   nice_names:
