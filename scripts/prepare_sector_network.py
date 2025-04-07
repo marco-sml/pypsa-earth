@@ -2908,13 +2908,13 @@ if __name__ == "__main__":
         snakemake = mock_snakemake(
             "prepare_sector_network",
             simpl="",
-            clusters="4",
-            ll="c1",
-            opts="Co2L-4H",
+            clusters="100",
+            ll="copt",
+            opts="Co2L-24H",
             planning_horizons="2030",
-            sopts="144H",
+            sopts="6H",
             discountrate=0.071,
-            demand="AB",
+            demand="DF",
         )
 
     # Load population layout
