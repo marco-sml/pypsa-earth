@@ -1914,9 +1914,12 @@ rule build_industry_demand:  #default data
         + "demand/industrial_distribution_key_elec_s{simpl}_{clusters}_{planning_horizons}.csv",
         #industrial_production_per_country_tomorrow="resources/demand/industrial_production_per_country_tomorrow_{planning_horizons}_{demand}.csv",
         #industrial_production_per_country="data/industrial_production_per_country.csv",
+        #base_industry_totals="resources/"
+        #+ SECDIR
+        #+ "demand/base_industry_totals_{planning_horizons}_{demand}.csv",
         base_industry_totals="resources/"
         + SECDIR
-        + "demand/base_industry_totals_{planning_horizons}_{demand}.csv",
+        + "demand/dz-custom_base_industry_totals_{planning_horizons}_{demand}.csv",
         industrial_database="data/industrial_database.csv",
         costs="resources/" + RDIR + "costs_{planning_horizons}.csv",
         industry_growth_cagr="data/demand/industry_growth_cagr.csv",
