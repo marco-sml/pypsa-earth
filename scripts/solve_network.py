@@ -1101,15 +1101,15 @@ if __name__ == "__main__":
         snakemake = mock_snakemake(
             "solve_sector_network",
             simpl="",
-            clusters="4",
-            ll="c1",
-            opts="Co2L-4H",
+            clusters="100",
+            ll="copt",
+            opts="Co2L-24H",
             planning_horizons="2030",
             discountrate="0.071",
-            demand="AB",
-            sopts="144H",
-            h2export="120",
-            configfile="config.tutorial.yaml",
+            demand="DF",
+            sopts="24H",
+            h2export="10",
+            configfile="config.yaml",
         )
 
     configure_logging(snakemake)
@@ -1147,6 +1147,9 @@ if __name__ == "__main__":
         n_ref = None
 
     n = prepare_network(n, solve_opts, config=solve_opts)
+
+    # Extract .lp file for debugging
+    #n.lopf(snapshots=n.snapshots, solver_name="gurobi", solver_options=solve_opts, keep_files=True)
 
     n = solve_network(
         n,
