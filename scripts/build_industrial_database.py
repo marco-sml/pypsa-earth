@@ -508,16 +508,16 @@ if __name__ == "__main__":
         )
 
     industrial_database_steel = create_steel_db()
-    industrial_database_cement = create_cement_db()
+    #industrial_database_cement = create_cement_db() could not be downloaded
     industrial_database_refineries = create_refineries_df()
-    industrial_database_paper = create_paper_df()
+    #industrial_database_paper = create_paper_df() could not be downloaded
 
     industrial_database = pd.concat(
         [
             industrial_database_steel,
-            industrial_database_cement,
+            #industrial_database_cement, 
             industrial_database_refineries,
-            industrial_database_paper,
+            #industrial_database_paper,
         ]
     )
 
