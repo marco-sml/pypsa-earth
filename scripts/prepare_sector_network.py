@@ -2608,6 +2608,7 @@ def add_residential(n, costs):
         )
         n.loads_t.p_set.loc[:, heat_buses] = np.where(
             ~np.isnan(safe_division),
+            #(safe_division * rem_heat_demand * 1e6) / (temporal_resolution), # potential bugfix
             (safe_division * rem_heat_demand * 1e6).div(temporal_resolution, axis=0),
             0.0,
         )
