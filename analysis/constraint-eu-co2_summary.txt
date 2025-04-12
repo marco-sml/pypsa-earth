@@ -1,0 +1,1394 @@
+🔧 PyPSA-Earth Constraint Summary (Linopy-based)
+Network file: ../results/DZ-sec-WS/prenetworks/elec_s_100_ec_lcopt_Co2L-120H_120H_2030_0.071_DF_0export.nc
+
+=== CONSTRAINTS ===
+- Generator-ext-p_nom-lower | shape = (593,)
+  ↳ No description available.
+    • Constraint `Generator-ext-p_nom-lower`
+--------------------------------------
++1 Generator-p_nom[DZ.10_1_AC onwind] ≥ -0.0
+    • Constraint `Generator-ext-p_nom-lower`
+--------------------------------------
++1 Generator-p_nom[DZ.10_1_AC solar] ≥ 0.1610153565479983
+    • Constraint `Generator-ext-p_nom-lower`
+--------------------------------------
++1 Generator-p_nom[DZ.11_1_AC onwind] ≥ -0.0
+
+- Generator-ext-p_nom-upper | shape = (593,)
+  ↳ No description available.
+    • Constraint `Generator-ext-p_nom-upper`
+--------------------------------------
++1 Generator-p_nom[DZ.10_1_AC onwind] ≤ 2092.724667508074
+    • Constraint `Generator-ext-p_nom-upper`
+--------------------------------------
++1 Generator-p_nom[DZ.10_1_AC solar] ≤ 4160.493447528786
+    • Constraint `Generator-ext-p_nom-upper`
+--------------------------------------
++1 Generator-p_nom[DZ.11_1_AC onwind] ≤ 8710.039774965659
+
+- Line-ext-s_nom-lower | shape = (97,)
+  ↳ No description available.
+    • Constraint `Line-ext-s_nom-lower`
+---------------------------------
++1 Line-s_nom[0] ≥ 1050.1424046290106
+    • Constraint `Line-ext-s_nom-lower`
+---------------------------------
++1 Line-s_nom[1] ≥ 2681.214650116622
+    • Constraint `Line-ext-s_nom-lower`
+---------------------------------
++1 Line-s_nom[10] ≥ 1787.4764334110819
+
+- Line-ext-s_nom-upper | shape = (97,)
+  ↳ No description available.
+    • Constraint `Line-ext-s_nom-upper`
+---------------------------------
++1 Line-s_nom[0] ≤ inf
+    • Constraint `Line-ext-s_nom-upper`
+---------------------------------
++1 Line-s_nom[1] ≤ inf
+    • Constraint `Line-ext-s_nom-upper`
+---------------------------------
++1 Line-s_nom[10] ≤ inf
+
+- Link-ext-p_nom-lower | shape = (2836,)
+  ↳ No description available.
+    • Constraint `Link-ext-p_nom-lower`
+---------------------------------
++1 Link-p_nom[DZ.10_1_AC co2 vent] ≥ -0.0
+    • Constraint `Link-ext-p_nom-lower`
+---------------------------------
++1 Link-p_nom[DZ.11_1_AC co2 vent] ≥ -0.0
+    • Constraint `Link-ext-p_nom-lower`
+---------------------------------
++1 Link-p_nom[DZ.12_1_AC co2 vent] ≥ -0.0
+
+- Link-ext-p_nom-upper | shape = (2836,)
+  ↳ No description available.
+    • Constraint `Link-ext-p_nom-upper`
+---------------------------------
++1 Link-p_nom[DZ.10_1_AC co2 vent] ≤ inf
+    • Constraint `Link-ext-p_nom-upper`
+---------------------------------
++1 Link-p_nom[DZ.11_1_AC co2 vent] ≤ inf
+    • Constraint `Link-ext-p_nom-upper`
+---------------------------------
++1 Link-p_nom[DZ.12_1_AC co2 vent] ≤ inf
+
+- Store-ext-e_nom-lower | shape = (614,)
+  ↳ No description available.
+    • Constraint `Store-ext-e_nom-lower`
+----------------------------------
++1 Store-e_nom[co2 atmosphere] ≥ -0.0
+    • Constraint `Store-ext-e_nom-lower`
+----------------------------------
++1 Store-e_nom[DZ.10_1_AC co2 stored] ≥ -0.0
+    • Constraint `Store-ext-e_nom-lower`
+----------------------------------
++1 Store-e_nom[DZ.11_1_AC co2 stored] ≥ -0.0
+
+- Store-ext-e_nom-upper | shape = (614,)
+  ↳ No description available.
+    • Constraint `Store-ext-e_nom-upper`
+----------------------------------
++1 Store-e_nom[co2 atmosphere] ≤ inf
+    • Constraint `Store-ext-e_nom-upper`
+----------------------------------
++1 Store-e_nom[DZ.10_1_AC co2 stored] ≤ inf
+    • Constraint `Store-ext-e_nom-upper`
+----------------------------------
++1 Store-e_nom[DZ.11_1_AC co2 stored] ≤ inf
+
+- Generator-fix-p-lower | shape = (73, 26)
+  ↳ No description available.
+    • Constraint `Generator-fix-p-lower` (Generator-fix: 26):
+-------------------------------------------------------
+[DZ.10_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.10_1_AC CCGT] ≥ -0.0
+[DZ.13_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.13_1_AC CCGT] ≥ -0.0
+[DZ.16_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.16_1_AC CCGT] ≥ -0.0
+[DZ.19_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.19_1_AC CCGT] ≥ -0.0
+[DZ.23_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.23_1_AC CCGT] ≥ -0.0
+[DZ.24_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.24_1_AC CCGT] ≥ -0.0
+[DZ.25_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.25_1_AC CCGT] ≥ -0.0
+		...
+[DZ.43_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.43_1_AC CCGT] ≥ -0.0
+[DZ.45_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.45_1_AC CCGT] ≥ -0.0
+[DZ.4_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.4_1_AC CCGT]   ≥ -0.0
+[DZ.5_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.5_1_AC CCGT]   ≥ -0.0
+[DZ.6_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.6_1_AC CCGT]   ≥ -0.0
+[DZ.8_1_AC ror]: +1 Generator-p[2013-01-01 00:00:00, DZ.8_1_AC ror]     ≥ -0.0
+[DZ.9_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.9_1_AC CCGT]   ≥ -0.0
+    • Constraint `Generator-fix-p-lower` (Generator-fix: 26):
+-------------------------------------------------------
+[DZ.10_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.10_1_AC CCGT] ≥ -0.0
+[DZ.13_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.13_1_AC CCGT] ≥ -0.0
+[DZ.16_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.16_1_AC CCGT] ≥ -0.0
+[DZ.19_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.19_1_AC CCGT] ≥ -0.0
+[DZ.23_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.23_1_AC CCGT] ≥ -0.0
+[DZ.24_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.24_1_AC CCGT] ≥ -0.0
+[DZ.25_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.25_1_AC CCGT] ≥ -0.0
+		...
+[DZ.43_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.43_1_AC CCGT] ≥ -0.0
+[DZ.45_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.45_1_AC CCGT] ≥ -0.0
+[DZ.4_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.4_1_AC CCGT]   ≥ -0.0
+[DZ.5_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.5_1_AC CCGT]   ≥ -0.0
+[DZ.6_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.6_1_AC CCGT]   ≥ -0.0
+[DZ.8_1_AC ror]: +1 Generator-p[2013-01-06 00:00:00, DZ.8_1_AC ror]     ≥ -0.0
+[DZ.9_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.9_1_AC CCGT]   ≥ -0.0
+    • Constraint `Generator-fix-p-lower` (Generator-fix: 26):
+-------------------------------------------------------
+[DZ.10_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.10_1_AC CCGT] ≥ -0.0
+[DZ.13_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.13_1_AC CCGT] ≥ -0.0
+[DZ.16_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.16_1_AC CCGT] ≥ -0.0
+[DZ.19_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.19_1_AC CCGT] ≥ -0.0
+[DZ.23_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.23_1_AC CCGT] ≥ -0.0
+[DZ.24_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.24_1_AC CCGT] ≥ -0.0
+[DZ.25_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.25_1_AC CCGT] ≥ -0.0
+		...
+[DZ.43_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.43_1_AC CCGT] ≥ -0.0
+[DZ.45_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.45_1_AC CCGT] ≥ -0.0
+[DZ.4_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.4_1_AC CCGT]   ≥ -0.0
+[DZ.5_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.5_1_AC CCGT]   ≥ -0.0
+[DZ.6_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.6_1_AC CCGT]   ≥ -0.0
+[DZ.8_1_AC ror]: +1 Generator-p[2013-01-11 00:00:00, DZ.8_1_AC ror]     ≥ -0.0
+[DZ.9_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.9_1_AC CCGT]   ≥ -0.0
+
+- Generator-fix-p-upper | shape = (73, 26)
+  ↳ No description available.
+    • Constraint `Generator-fix-p-upper` (Generator-fix: 26):
+-------------------------------------------------------
+[DZ.10_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.10_1_AC CCGT] ≤ 1310.0
+[DZ.13_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.13_1_AC CCGT] ≤ 1872.0
+[DZ.16_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.16_1_AC CCGT] ≤ 1200.0
+[DZ.19_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.19_1_AC CCGT] ≤ 1200.0
+[DZ.23_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.23_1_AC CCGT] ≤ 1986.0
+[DZ.24_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.24_1_AC CCGT] ≤ 1686.0
+[DZ.25_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.25_1_AC CCGT] ≤ 1459.0
+		...
+[DZ.43_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.43_1_AC CCGT] ≤ 300.0
+[DZ.45_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.45_1_AC CCGT] ≤ 1227.0
+[DZ.4_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.4_1_AC CCGT]   ≤ 418.0
+[DZ.5_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.5_1_AC CCGT]   ≤ 71.87146626275513
+[DZ.6_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.6_1_AC CCGT]   ≤ 793.5
+[DZ.8_1_AC ror]: +1 Generator-p[2013-01-01 00:00:00, DZ.8_1_AC ror]     ≤ 5.723959114308502
+[DZ.9_1_AC CCGT]: +1 Generator-p[2013-01-01 00:00:00, DZ.9_1_AC CCGT]   ≤ 2750.0
+    • Constraint `Generator-fix-p-upper` (Generator-fix: 26):
+-------------------------------------------------------
+[DZ.10_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.10_1_AC CCGT] ≤ 1310.0
+[DZ.13_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.13_1_AC CCGT] ≤ 1872.0
+[DZ.16_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.16_1_AC CCGT] ≤ 1200.0
+[DZ.19_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.19_1_AC CCGT] ≤ 1200.0
+[DZ.23_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.23_1_AC CCGT] ≤ 1986.0
+[DZ.24_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.24_1_AC CCGT] ≤ 1686.0
+[DZ.25_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.25_1_AC CCGT] ≤ 1459.0
+		...
+[DZ.43_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.43_1_AC CCGT] ≤ 300.0
+[DZ.45_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.45_1_AC CCGT] ≤ 1227.0
+[DZ.4_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.4_1_AC CCGT]   ≤ 418.0
+[DZ.5_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.5_1_AC CCGT]   ≤ 71.87146626275513
+[DZ.6_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.6_1_AC CCGT]   ≤ 793.5
+[DZ.8_1_AC ror]: +1 Generator-p[2013-01-06 00:00:00, DZ.8_1_AC ror]     ≤ 2.4464649117302044
+[DZ.9_1_AC CCGT]: +1 Generator-p[2013-01-06 00:00:00, DZ.9_1_AC CCGT]   ≤ 2750.0
+    • Constraint `Generator-fix-p-upper` (Generator-fix: 26):
+-------------------------------------------------------
+[DZ.10_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.10_1_AC CCGT] ≤ 1310.0
+[DZ.13_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.13_1_AC CCGT] ≤ 1872.0
+[DZ.16_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.16_1_AC CCGT] ≤ 1200.0
+[DZ.19_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.19_1_AC CCGT] ≤ 1200.0
+[DZ.23_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.23_1_AC CCGT] ≤ 1986.0
+[DZ.24_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.24_1_AC CCGT] ≤ 1686.0
+[DZ.25_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.25_1_AC CCGT] ≤ 1459.0
+		...
+[DZ.43_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.43_1_AC CCGT] ≤ 300.0
+[DZ.45_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.45_1_AC CCGT] ≤ 1227.0
+[DZ.4_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.4_1_AC CCGT]   ≤ 418.0
+[DZ.5_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.5_1_AC CCGT]   ≤ 71.87146626275513
+[DZ.6_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.6_1_AC CCGT]   ≤ 793.5
+[DZ.8_1_AC ror]: +1 Generator-p[2013-01-11 00:00:00, DZ.8_1_AC ror]     ≤ 6.903389743329679
+[DZ.9_1_AC CCGT]: +1 Generator-p[2013-01-11 00:00:00, DZ.9_1_AC CCGT]   ≤ 2750.0
+
+- Generator-ext-p-lower | shape = (73, 593)
+  ↳ No description available.
+    • Constraint `Generator-ext-p-lower` (Generator-ext: 593):
+--------------------------------------------------------
+[DZ.10_1_AC onwind]: +1 Generator-p[2013-01-01 00:00:00, DZ.10_1_AC onwind]               ≥ -0.0
+[DZ.10_1_AC solar]: +1 Generator-p[2013-01-01 00:00:00, DZ.10_1_AC solar]                 ≥ -0.0
+[DZ.11_1_AC onwind]: +1 Generator-p[2013-01-01 00:00:00, DZ.11_1_AC onwind]               ≥ -0.0
+[DZ.11_1_AC solar]: +1 Generator-p[2013-01-01 00:00:00, DZ.11_1_AC solar]                 ≥ -0.0
+[DZ.12_1_AC onwind]: +1 Generator-p[2013-01-01 00:00:00, DZ.12_1_AC onwind]               ≥ -0.0
+[DZ.12_1_AC solar]: +1 Generator-p[2013-01-01 00:00:00, DZ.12_1_AC solar]                 ≥ -0.0
+[DZ.13_1_AC offwind-ac]: +1 Generator-p[2013-01-01 00:00:00, DZ.13_1_AC offwind-ac]       ≥ -0.0
+		...
+[DZ.48_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.48_1_AC solar rooftop] ≥ -0.0
+[DZ.4_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.4_1_AC solar rooftop]   ≥ -0.0
+[DZ.5_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.5_1_AC solar rooftop]   ≥ -0.0
+[DZ.6_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.6_1_AC solar rooftop]   ≥ -0.0
+[DZ.7_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.7_1_AC solar rooftop]   ≥ -0.0
+[DZ.8_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.8_1_AC solar rooftop]   ≥ -0.0
+[DZ.9_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.9_1_AC solar rooftop]   ≥ -0.0
+    • Constraint `Generator-ext-p-lower` (Generator-ext: 593):
+--------------------------------------------------------
+[DZ.10_1_AC onwind]: +1 Generator-p[2013-01-06 00:00:00, DZ.10_1_AC onwind]               ≥ -0.0
+[DZ.10_1_AC solar]: +1 Generator-p[2013-01-06 00:00:00, DZ.10_1_AC solar]                 ≥ -0.0
+[DZ.11_1_AC onwind]: +1 Generator-p[2013-01-06 00:00:00, DZ.11_1_AC onwind]               ≥ -0.0
+[DZ.11_1_AC solar]: +1 Generator-p[2013-01-06 00:00:00, DZ.11_1_AC solar]                 ≥ -0.0
+[DZ.12_1_AC onwind]: +1 Generator-p[2013-01-06 00:00:00, DZ.12_1_AC onwind]               ≥ -0.0
+[DZ.12_1_AC solar]: +1 Generator-p[2013-01-06 00:00:00, DZ.12_1_AC solar]                 ≥ -0.0
+[DZ.13_1_AC offwind-ac]: +1 Generator-p[2013-01-06 00:00:00, DZ.13_1_AC offwind-ac]       ≥ -0.0
+		...
+[DZ.48_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.48_1_AC solar rooftop] ≥ -0.0
+[DZ.4_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.4_1_AC solar rooftop]   ≥ -0.0
+[DZ.5_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.5_1_AC solar rooftop]   ≥ -0.0
+[DZ.6_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.6_1_AC solar rooftop]   ≥ -0.0
+[DZ.7_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.7_1_AC solar rooftop]   ≥ -0.0
+[DZ.8_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.8_1_AC solar rooftop]   ≥ -0.0
+[DZ.9_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.9_1_AC solar rooftop]   ≥ -0.0
+    • Constraint `Generator-ext-p-lower` (Generator-ext: 593):
+--------------------------------------------------------
+[DZ.10_1_AC onwind]: +1 Generator-p[2013-01-11 00:00:00, DZ.10_1_AC onwind]               ≥ -0.0
+[DZ.10_1_AC solar]: +1 Generator-p[2013-01-11 00:00:00, DZ.10_1_AC solar]                 ≥ -0.0
+[DZ.11_1_AC onwind]: +1 Generator-p[2013-01-11 00:00:00, DZ.11_1_AC onwind]               ≥ -0.0
+[DZ.11_1_AC solar]: +1 Generator-p[2013-01-11 00:00:00, DZ.11_1_AC solar]                 ≥ -0.0
+[DZ.12_1_AC onwind]: +1 Generator-p[2013-01-11 00:00:00, DZ.12_1_AC onwind]               ≥ -0.0
+[DZ.12_1_AC solar]: +1 Generator-p[2013-01-11 00:00:00, DZ.12_1_AC solar]                 ≥ -0.0
+[DZ.13_1_AC offwind-ac]: +1 Generator-p[2013-01-11 00:00:00, DZ.13_1_AC offwind-ac]       ≥ -0.0
+		...
+[DZ.48_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.48_1_AC solar rooftop] ≥ -0.0
+[DZ.4_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.4_1_AC solar rooftop]   ≥ -0.0
+[DZ.5_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.5_1_AC solar rooftop]   ≥ -0.0
+[DZ.6_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.6_1_AC solar rooftop]   ≥ -0.0
+[DZ.7_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.7_1_AC solar rooftop]   ≥ -0.0
+[DZ.8_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.8_1_AC solar rooftop]   ≥ -0.0
+[DZ.9_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.9_1_AC solar rooftop]   ≥ -0.0
+
+- Generator-ext-p-upper | shape = (73, 593)
+  ↳ No description available.
+    • Constraint `Generator-ext-p-upper` (Generator-ext: 593):
+--------------------------------------------------------
+[DZ.10_1_AC onwind]: +1 Generator-p[2013-01-01 00:00:00, DZ.10_1_AC onwind] - 0.02973 Generator-p_nom[DZ.10_1_AC onwind]                     ≤ -0.0
+[DZ.10_1_AC solar]: +1 Generator-p[2013-01-01 00:00:00, DZ.10_1_AC solar] - 0.1054 Generator-p_nom[DZ.10_1_AC solar]                         ≤ -0.0
+[DZ.11_1_AC onwind]: +1 Generator-p[2013-01-01 00:00:00, DZ.11_1_AC onwind] - 0.03154 Generator-p_nom[DZ.11_1_AC onwind]                     ≤ -0.0
+[DZ.11_1_AC solar]: +1 Generator-p[2013-01-01 00:00:00, DZ.11_1_AC solar] - 0.1081 Generator-p_nom[DZ.11_1_AC solar]                         ≤ -0.0
+[DZ.12_1_AC onwind]: +1 Generator-p[2013-01-01 00:00:00, DZ.12_1_AC onwind] - 0.0314 Generator-p_nom[DZ.12_1_AC onwind]                      ≤ -0.0
+[DZ.12_1_AC solar]: +1 Generator-p[2013-01-01 00:00:00, DZ.12_1_AC solar] - 0.1065 Generator-p_nom[DZ.12_1_AC solar]                         ≤ -0.0
+[DZ.13_1_AC offwind-ac]: +1 Generator-p[2013-01-01 00:00:00, DZ.13_1_AC offwind-ac] - 0.1718 Generator-p_nom[DZ.13_1_AC offwind-ac]          ≤ -0.0
+		...
+[DZ.48_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.48_1_AC solar rooftop] - 0.1065 Generator-p_nom[DZ.48_1_AC solar rooftop] ≤ -0.0
+[DZ.4_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.4_1_AC solar rooftop] - 0.1064 Generator-p_nom[DZ.4_1_AC solar rooftop]    ≤ -0.0
+[DZ.5_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.5_1_AC solar rooftop] - 0.07821 Generator-p_nom[DZ.5_1_AC solar rooftop]   ≤ -0.0
+[DZ.6_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.6_1_AC solar rooftop] - 0.1154 Generator-p_nom[DZ.6_1_AC solar rooftop]    ≤ -0.0
+[DZ.7_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.7_1_AC solar rooftop] - 0.1639 Generator-p_nom[DZ.7_1_AC solar rooftop]    ≤ -0.0
+[DZ.8_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.8_1_AC solar rooftop] - 0.1046 Generator-p_nom[DZ.8_1_AC solar rooftop]    ≤ -0.0
+[DZ.9_1_AC solar rooftop]: +1 Generator-p[2013-01-01 00:00:00, DZ.9_1_AC solar rooftop] - 0.1325 Generator-p_nom[DZ.9_1_AC solar rooftop]    ≤ -0.0
+    • Constraint `Generator-ext-p-upper` (Generator-ext: 593):
+--------------------------------------------------------
+[DZ.10_1_AC onwind]: +1 Generator-p[2013-01-06 00:00:00, DZ.10_1_AC onwind] - 0.0461 Generator-p_nom[DZ.10_1_AC onwind]                      ≤ -0.0
+[DZ.10_1_AC solar]: +1 Generator-p[2013-01-06 00:00:00, DZ.10_1_AC solar] - 0.1482 Generator-p_nom[DZ.10_1_AC solar]                         ≤ -0.0
+[DZ.11_1_AC onwind]: +1 Generator-p[2013-01-06 00:00:00, DZ.11_1_AC onwind] - 0.01351 Generator-p_nom[DZ.11_1_AC onwind]                     ≤ -0.0
+[DZ.11_1_AC solar]: +1 Generator-p[2013-01-06 00:00:00, DZ.11_1_AC solar] - 0.1555 Generator-p_nom[DZ.11_1_AC solar]                         ≤ -0.0
+[DZ.12_1_AC onwind]: +1 Generator-p[2013-01-06 00:00:00, DZ.12_1_AC onwind] - 0.03459 Generator-p_nom[DZ.12_1_AC onwind]                     ≤ -0.0
+[DZ.12_1_AC solar]: +1 Generator-p[2013-01-06 00:00:00, DZ.12_1_AC solar] - 0.1538 Generator-p_nom[DZ.12_1_AC solar]                         ≤ -0.0
+[DZ.13_1_AC offwind-ac]: +1 Generator-p[2013-01-06 00:00:00, DZ.13_1_AC offwind-ac] - 0.3367 Generator-p_nom[DZ.13_1_AC offwind-ac]          ≤ -0.0
+		...
+[DZ.48_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.48_1_AC solar rooftop] - 0.1731 Generator-p_nom[DZ.48_1_AC solar rooftop] ≤ -0.0
+[DZ.4_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.4_1_AC solar rooftop] - 0.1455 Generator-p_nom[DZ.4_1_AC solar rooftop]    ≤ -0.0
+[DZ.5_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.5_1_AC solar rooftop] - 0.1106 Generator-p_nom[DZ.5_1_AC solar rooftop]    ≤ -0.0
+[DZ.6_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.6_1_AC solar rooftop] - 0.1585 Generator-p_nom[DZ.6_1_AC solar rooftop]    ≤ -0.0
+[DZ.7_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.7_1_AC solar rooftop] - 0.1726 Generator-p_nom[DZ.7_1_AC solar rooftop]    ≤ -0.0
+[DZ.8_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.8_1_AC solar rooftop] - 0.1476 Generator-p_nom[DZ.8_1_AC solar rooftop]    ≤ -0.0
+[DZ.9_1_AC solar rooftop]: +1 Generator-p[2013-01-06 00:00:00, DZ.9_1_AC solar rooftop] - 0.1563 Generator-p_nom[DZ.9_1_AC solar rooftop]    ≤ -0.0
+    • Constraint `Generator-ext-p-upper` (Generator-ext: 593):
+--------------------------------------------------------
+[DZ.10_1_AC onwind]: +1 Generator-p[2013-01-11 00:00:00, DZ.10_1_AC onwind] - 0.1969 Generator-p_nom[DZ.10_1_AC onwind]                      ≤ -0.0
+[DZ.10_1_AC solar]: +1 Generator-p[2013-01-11 00:00:00, DZ.10_1_AC solar] - 0.09666 Generator-p_nom[DZ.10_1_AC solar]                        ≤ -0.0
+[DZ.11_1_AC onwind]: +1 Generator-p[2013-01-11 00:00:00, DZ.11_1_AC onwind] - 0.07172 Generator-p_nom[DZ.11_1_AC onwind]                     ≤ -0.0
+[DZ.11_1_AC solar]: +1 Generator-p[2013-01-11 00:00:00, DZ.11_1_AC solar] - 0.1237 Generator-p_nom[DZ.11_1_AC solar]                         ≤ -0.0
+[DZ.12_1_AC onwind]: +1 Generator-p[2013-01-11 00:00:00, DZ.12_1_AC onwind] - 0.1258 Generator-p_nom[DZ.12_1_AC onwind]                      ≤ -0.0
+[DZ.12_1_AC solar]: +1 Generator-p[2013-01-11 00:00:00, DZ.12_1_AC solar] - 0.1085 Generator-p_nom[DZ.12_1_AC solar]                         ≤ -0.0
+[DZ.13_1_AC offwind-ac]: +1 Generator-p[2013-01-11 00:00:00, DZ.13_1_AC offwind-ac] - 0.4268 Generator-p_nom[DZ.13_1_AC offwind-ac]          ≤ -0.0
+		...
+[DZ.48_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.48_1_AC solar rooftop] - 0.1303 Generator-p_nom[DZ.48_1_AC solar rooftop] ≤ -0.0
+[DZ.4_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.4_1_AC solar rooftop] - 0.09807 Generator-p_nom[DZ.4_1_AC solar rooftop]   ≤ -0.0
+[DZ.5_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.5_1_AC solar rooftop] - 0.1238 Generator-p_nom[DZ.5_1_AC solar rooftop]    ≤ -0.0
+[DZ.6_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.6_1_AC solar rooftop] - 0.1469 Generator-p_nom[DZ.6_1_AC solar rooftop]    ≤ -0.0
+[DZ.7_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.7_1_AC solar rooftop] - 0.18 Generator-p_nom[DZ.7_1_AC solar rooftop]      ≤ -0.0
+[DZ.8_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.8_1_AC solar rooftop] - 0.1156 Generator-p_nom[DZ.8_1_AC solar rooftop]    ≤ -0.0
+[DZ.9_1_AC solar rooftop]: +1 Generator-p[2013-01-11 00:00:00, DZ.9_1_AC solar rooftop] - 0.1589 Generator-p_nom[DZ.9_1_AC solar rooftop]    ≤ -0.0
+
+- Line-ext-s-lower | shape = (73, 97)
+  ↳ No description available.
+    • Constraint `Line-ext-s-lower` (Line-ext: 97):
+---------------------------------------------
+[0]: +1 Line-s[2013-01-01 00:00:00, 0] + 0.7 Line-s_nom[0]    ≥ -0.0
+[1]: +1 Line-s[2013-01-01 00:00:00, 1] + 0.7 Line-s_nom[1]    ≥ -0.0
+[10]: +1 Line-s[2013-01-01 00:00:00, 10] + 0.7 Line-s_nom[10] ≥ -0.0
+[11]: +1 Line-s[2013-01-01 00:00:00, 11] + 0.7 Line-s_nom[11] ≥ -0.0
+[12]: +1 Line-s[2013-01-01 00:00:00, 12] + 0.7 Line-s_nom[12] ≥ -0.0
+[13]: +1 Line-s[2013-01-01 00:00:00, 13] + 0.7 Line-s_nom[13] ≥ -0.0
+[14]: +1 Line-s[2013-01-01 00:00:00, 14] + 0.7 Line-s_nom[14] ≥ -0.0
+		...
+[90]: +1 Line-s[2013-01-01 00:00:00, 90] + 0.7 Line-s_nom[90] ≥ -0.0
+[91]: +1 Line-s[2013-01-01 00:00:00, 91] + 0.7 Line-s_nom[91] ≥ -0.0
+[92]: +1 Line-s[2013-01-01 00:00:00, 92] + 0.7 Line-s_nom[92] ≥ -0.0
+[93]: +1 Line-s[2013-01-01 00:00:00, 93] + 0.7 Line-s_nom[93] ≥ -0.0
+[94]: +1 Line-s[2013-01-01 00:00:00, 94] + 0.7 Line-s_nom[94] ≥ -0.0
+[95]: +1 Line-s[2013-01-01 00:00:00, 95] + 0.7 Line-s_nom[95] ≥ -0.0
+[96]: +1 Line-s[2013-01-01 00:00:00, 96] + 0.7 Line-s_nom[96] ≥ -0.0
+    • Constraint `Line-ext-s-lower` (Line-ext: 97):
+---------------------------------------------
+[0]: +1 Line-s[2013-01-06 00:00:00, 0] + 0.7 Line-s_nom[0]    ≥ -0.0
+[1]: +1 Line-s[2013-01-06 00:00:00, 1] + 0.7 Line-s_nom[1]    ≥ -0.0
+[10]: +1 Line-s[2013-01-06 00:00:00, 10] + 0.7 Line-s_nom[10] ≥ -0.0
+[11]: +1 Line-s[2013-01-06 00:00:00, 11] + 0.7 Line-s_nom[11] ≥ -0.0
+[12]: +1 Line-s[2013-01-06 00:00:00, 12] + 0.7 Line-s_nom[12] ≥ -0.0
+[13]: +1 Line-s[2013-01-06 00:00:00, 13] + 0.7 Line-s_nom[13] ≥ -0.0
+[14]: +1 Line-s[2013-01-06 00:00:00, 14] + 0.7 Line-s_nom[14] ≥ -0.0
+		...
+[90]: +1 Line-s[2013-01-06 00:00:00, 90] + 0.7 Line-s_nom[90] ≥ -0.0
+[91]: +1 Line-s[2013-01-06 00:00:00, 91] + 0.7 Line-s_nom[91] ≥ -0.0
+[92]: +1 Line-s[2013-01-06 00:00:00, 92] + 0.7 Line-s_nom[92] ≥ -0.0
+[93]: +1 Line-s[2013-01-06 00:00:00, 93] + 0.7 Line-s_nom[93] ≥ -0.0
+[94]: +1 Line-s[2013-01-06 00:00:00, 94] + 0.7 Line-s_nom[94] ≥ -0.0
+[95]: +1 Line-s[2013-01-06 00:00:00, 95] + 0.7 Line-s_nom[95] ≥ -0.0
+[96]: +1 Line-s[2013-01-06 00:00:00, 96] + 0.7 Line-s_nom[96] ≥ -0.0
+    • Constraint `Line-ext-s-lower` (Line-ext: 97):
+---------------------------------------------
+[0]: +1 Line-s[2013-01-11 00:00:00, 0] + 0.7 Line-s_nom[0]    ≥ -0.0
+[1]: +1 Line-s[2013-01-11 00:00:00, 1] + 0.7 Line-s_nom[1]    ≥ -0.0
+[10]: +1 Line-s[2013-01-11 00:00:00, 10] + 0.7 Line-s_nom[10] ≥ -0.0
+[11]: +1 Line-s[2013-01-11 00:00:00, 11] + 0.7 Line-s_nom[11] ≥ -0.0
+[12]: +1 Line-s[2013-01-11 00:00:00, 12] + 0.7 Line-s_nom[12] ≥ -0.0
+[13]: +1 Line-s[2013-01-11 00:00:00, 13] + 0.7 Line-s_nom[13] ≥ -0.0
+[14]: +1 Line-s[2013-01-11 00:00:00, 14] + 0.7 Line-s_nom[14] ≥ -0.0
+		...
+[90]: +1 Line-s[2013-01-11 00:00:00, 90] + 0.7 Line-s_nom[90] ≥ -0.0
+[91]: +1 Line-s[2013-01-11 00:00:00, 91] + 0.7 Line-s_nom[91] ≥ -0.0
+[92]: +1 Line-s[2013-01-11 00:00:00, 92] + 0.7 Line-s_nom[92] ≥ -0.0
+[93]: +1 Line-s[2013-01-11 00:00:00, 93] + 0.7 Line-s_nom[93] ≥ -0.0
+[94]: +1 Line-s[2013-01-11 00:00:00, 94] + 0.7 Line-s_nom[94] ≥ -0.0
+[95]: +1 Line-s[2013-01-11 00:00:00, 95] + 0.7 Line-s_nom[95] ≥ -0.0
+[96]: +1 Line-s[2013-01-11 00:00:00, 96] + 0.7 Line-s_nom[96] ≥ -0.0
+
+- Line-ext-s-upper | shape = (73, 97)
+  ↳ No description available.
+    • Constraint `Line-ext-s-upper` (Line-ext: 97):
+---------------------------------------------
+[0]: +1 Line-s[2013-01-01 00:00:00, 0] - 0.7 Line-s_nom[0]    ≤ -0.0
+[1]: +1 Line-s[2013-01-01 00:00:00, 1] - 0.7 Line-s_nom[1]    ≤ -0.0
+[10]: +1 Line-s[2013-01-01 00:00:00, 10] - 0.7 Line-s_nom[10] ≤ -0.0
+[11]: +1 Line-s[2013-01-01 00:00:00, 11] - 0.7 Line-s_nom[11] ≤ -0.0
+[12]: +1 Line-s[2013-01-01 00:00:00, 12] - 0.7 Line-s_nom[12] ≤ -0.0
+[13]: +1 Line-s[2013-01-01 00:00:00, 13] - 0.7 Line-s_nom[13] ≤ -0.0
+[14]: +1 Line-s[2013-01-01 00:00:00, 14] - 0.7 Line-s_nom[14] ≤ -0.0
+		...
+[90]: +1 Line-s[2013-01-01 00:00:00, 90] - 0.7 Line-s_nom[90] ≤ -0.0
+[91]: +1 Line-s[2013-01-01 00:00:00, 91] - 0.7 Line-s_nom[91] ≤ -0.0
+[92]: +1 Line-s[2013-01-01 00:00:00, 92] - 0.7 Line-s_nom[92] ≤ -0.0
+[93]: +1 Line-s[2013-01-01 00:00:00, 93] - 0.7 Line-s_nom[93] ≤ -0.0
+[94]: +1 Line-s[2013-01-01 00:00:00, 94] - 0.7 Line-s_nom[94] ≤ -0.0
+[95]: +1 Line-s[2013-01-01 00:00:00, 95] - 0.7 Line-s_nom[95] ≤ -0.0
+[96]: +1 Line-s[2013-01-01 00:00:00, 96] - 0.7 Line-s_nom[96] ≤ -0.0
+    • Constraint `Line-ext-s-upper` (Line-ext: 97):
+---------------------------------------------
+[0]: +1 Line-s[2013-01-06 00:00:00, 0] - 0.7 Line-s_nom[0]    ≤ -0.0
+[1]: +1 Line-s[2013-01-06 00:00:00, 1] - 0.7 Line-s_nom[1]    ≤ -0.0
+[10]: +1 Line-s[2013-01-06 00:00:00, 10] - 0.7 Line-s_nom[10] ≤ -0.0
+[11]: +1 Line-s[2013-01-06 00:00:00, 11] - 0.7 Line-s_nom[11] ≤ -0.0
+[12]: +1 Line-s[2013-01-06 00:00:00, 12] - 0.7 Line-s_nom[12] ≤ -0.0
+[13]: +1 Line-s[2013-01-06 00:00:00, 13] - 0.7 Line-s_nom[13] ≤ -0.0
+[14]: +1 Line-s[2013-01-06 00:00:00, 14] - 0.7 Line-s_nom[14] ≤ -0.0
+		...
+[90]: +1 Line-s[2013-01-06 00:00:00, 90] - 0.7 Line-s_nom[90] ≤ -0.0
+[91]: +1 Line-s[2013-01-06 00:00:00, 91] - 0.7 Line-s_nom[91] ≤ -0.0
+[92]: +1 Line-s[2013-01-06 00:00:00, 92] - 0.7 Line-s_nom[92] ≤ -0.0
+[93]: +1 Line-s[2013-01-06 00:00:00, 93] - 0.7 Line-s_nom[93] ≤ -0.0
+[94]: +1 Line-s[2013-01-06 00:00:00, 94] - 0.7 Line-s_nom[94] ≤ -0.0
+[95]: +1 Line-s[2013-01-06 00:00:00, 95] - 0.7 Line-s_nom[95] ≤ -0.0
+[96]: +1 Line-s[2013-01-06 00:00:00, 96] - 0.7 Line-s_nom[96] ≤ -0.0
+    • Constraint `Line-ext-s-upper` (Line-ext: 97):
+---------------------------------------------
+[0]: +1 Line-s[2013-01-11 00:00:00, 0] - 0.7 Line-s_nom[0]    ≤ -0.0
+[1]: +1 Line-s[2013-01-11 00:00:00, 1] - 0.7 Line-s_nom[1]    ≤ -0.0
+[10]: +1 Line-s[2013-01-11 00:00:00, 10] - 0.7 Line-s_nom[10] ≤ -0.0
+[11]: +1 Line-s[2013-01-11 00:00:00, 11] - 0.7 Line-s_nom[11] ≤ -0.0
+[12]: +1 Line-s[2013-01-11 00:00:00, 12] - 0.7 Line-s_nom[12] ≤ -0.0
+[13]: +1 Line-s[2013-01-11 00:00:00, 13] - 0.7 Line-s_nom[13] ≤ -0.0
+[14]: +1 Line-s[2013-01-11 00:00:00, 14] - 0.7 Line-s_nom[14] ≤ -0.0
+		...
+[90]: +1 Line-s[2013-01-11 00:00:00, 90] - 0.7 Line-s_nom[90] ≤ -0.0
+[91]: +1 Line-s[2013-01-11 00:00:00, 91] - 0.7 Line-s_nom[91] ≤ -0.0
+[92]: +1 Line-s[2013-01-11 00:00:00, 92] - 0.7 Line-s_nom[92] ≤ -0.0
+[93]: +1 Line-s[2013-01-11 00:00:00, 93] - 0.7 Line-s_nom[93] ≤ -0.0
+[94]: +1 Line-s[2013-01-11 00:00:00, 94] - 0.7 Line-s_nom[94] ≤ -0.0
+[95]: +1 Line-s[2013-01-11 00:00:00, 95] - 0.7 Line-s_nom[95] ≤ -0.0
+[96]: +1 Line-s[2013-01-11 00:00:00, 96] - 0.7 Line-s_nom[96] ≤ -0.0
+
+- Link-fix-p-lower | shape = (73, 282)
+  ↳ No description available.
+    • Constraint `Link-fix-p-lower` (Link-fix: 282):
+----------------------------------------------
+[DZ.10_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC oil] ≥ -0.0
+[DZ.11_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.11_1_AC oil] ≥ -0.0
+[DZ.12_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.12_1_AC oil] ≥ -0.0
+[DZ.13_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.13_1_AC oil] ≥ -0.0
+[DZ.14_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.14_1_AC oil] ≥ -0.0
+[DZ.15_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.15_1_AC oil] ≥ -0.0
+[DZ.16_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.16_1_AC oil] ≥ -0.0
+		...
+[DZ.48_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.48_1_AC V2G] ≥ -0.0
+[DZ.4_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.4_1_AC V2G]   ≥ -0.0
+[DZ.5_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.5_1_AC V2G]   ≥ -0.0
+[DZ.6_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.6_1_AC V2G]   ≥ -0.0
+[DZ.7_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.7_1_AC V2G]   ≥ -0.0
+[DZ.8_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.8_1_AC V2G]   ≥ -0.0
+[DZ.9_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.9_1_AC V2G]   ≥ -0.0
+    • Constraint `Link-fix-p-lower` (Link-fix: 282):
+----------------------------------------------
+[DZ.10_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC oil] ≥ -0.0
+[DZ.11_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.11_1_AC oil] ≥ -0.0
+[DZ.12_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.12_1_AC oil] ≥ -0.0
+[DZ.13_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.13_1_AC oil] ≥ -0.0
+[DZ.14_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.14_1_AC oil] ≥ -0.0
+[DZ.15_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.15_1_AC oil] ≥ -0.0
+[DZ.16_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.16_1_AC oil] ≥ -0.0
+		...
+[DZ.48_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.48_1_AC V2G] ≥ -0.0
+[DZ.4_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.4_1_AC V2G]   ≥ -0.0
+[DZ.5_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.5_1_AC V2G]   ≥ -0.0
+[DZ.6_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.6_1_AC V2G]   ≥ -0.0
+[DZ.7_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.7_1_AC V2G]   ≥ -0.0
+[DZ.8_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.8_1_AC V2G]   ≥ -0.0
+[DZ.9_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.9_1_AC V2G]   ≥ -0.0
+    • Constraint `Link-fix-p-lower` (Link-fix: 282):
+----------------------------------------------
+[DZ.10_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC oil] ≥ -0.0
+[DZ.11_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.11_1_AC oil] ≥ -0.0
+[DZ.12_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.12_1_AC oil] ≥ -0.0
+[DZ.13_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.13_1_AC oil] ≥ -0.0
+[DZ.14_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.14_1_AC oil] ≥ -0.0
+[DZ.15_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.15_1_AC oil] ≥ -0.0
+[DZ.16_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.16_1_AC oil] ≥ -0.0
+		...
+[DZ.48_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.48_1_AC V2G] ≥ -0.0
+[DZ.4_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.4_1_AC V2G]   ≥ -0.0
+[DZ.5_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.5_1_AC V2G]   ≥ -0.0
+[DZ.6_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.6_1_AC V2G]   ≥ -0.0
+[DZ.7_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.7_1_AC V2G]   ≥ -0.0
+[DZ.8_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.8_1_AC V2G]   ≥ -0.0
+[DZ.9_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.9_1_AC V2G]   ≥ -0.0
+
+- Link-fix-p-upper | shape = (73, 282)
+  ↳ No description available.
+    • Constraint `Link-fix-p-upper` (Link-fix: 282):
+----------------------------------------------
+[DZ.10_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC oil] ≤ -0.0
+[DZ.11_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.11_1_AC oil] ≤ -0.0
+[DZ.12_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.12_1_AC oil] ≤ -0.0
+[DZ.13_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.13_1_AC oil] ≤ -0.0
+[DZ.14_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.14_1_AC oil] ≤ -0.0
+[DZ.15_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.15_1_AC oil] ≤ -0.0
+[DZ.16_1_AC oil]: +1 Link-p[2013-01-01 00:00:00, DZ.16_1_AC oil] ≤ -0.0
+		...
+[DZ.48_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.48_1_AC V2G] ≤ -0.0
+[DZ.4_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.4_1_AC V2G]   ≤ -0.0
+[DZ.5_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.5_1_AC V2G]   ≤ -0.0
+[DZ.6_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.6_1_AC V2G]   ≤ -0.0
+[DZ.7_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.7_1_AC V2G]   ≤ -0.0
+[DZ.8_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.8_1_AC V2G]   ≤ -0.0
+[DZ.9_1_AC V2G]: +1 Link-p[2013-01-01 00:00:00, DZ.9_1_AC V2G]   ≤ -0.0
+    • Constraint `Link-fix-p-upper` (Link-fix: 282):
+----------------------------------------------
+[DZ.10_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC oil] ≤ -0.0
+[DZ.11_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.11_1_AC oil] ≤ -0.0
+[DZ.12_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.12_1_AC oil] ≤ -0.0
+[DZ.13_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.13_1_AC oil] ≤ -0.0
+[DZ.14_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.14_1_AC oil] ≤ -0.0
+[DZ.15_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.15_1_AC oil] ≤ -0.0
+[DZ.16_1_AC oil]: +1 Link-p[2013-01-06 00:00:00, DZ.16_1_AC oil] ≤ -0.0
+		...
+[DZ.48_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.48_1_AC V2G] ≤ -0.0
+[DZ.4_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.4_1_AC V2G]   ≤ -0.0
+[DZ.5_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.5_1_AC V2G]   ≤ -0.0
+[DZ.6_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.6_1_AC V2G]   ≤ -0.0
+[DZ.7_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.7_1_AC V2G]   ≤ -0.0
+[DZ.8_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.8_1_AC V2G]   ≤ -0.0
+[DZ.9_1_AC V2G]: +1 Link-p[2013-01-06 00:00:00, DZ.9_1_AC V2G]   ≤ -0.0
+    • Constraint `Link-fix-p-upper` (Link-fix: 282):
+----------------------------------------------
+[DZ.10_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC oil] ≤ -0.0
+[DZ.11_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.11_1_AC oil] ≤ -0.0
+[DZ.12_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.12_1_AC oil] ≤ -0.0
+[DZ.13_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.13_1_AC oil] ≤ -0.0
+[DZ.14_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.14_1_AC oil] ≤ -0.0
+[DZ.15_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.15_1_AC oil] ≤ -0.0
+[DZ.16_1_AC oil]: +1 Link-p[2013-01-11 00:00:00, DZ.16_1_AC oil] ≤ -0.0
+		...
+[DZ.48_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.48_1_AC V2G] ≤ -0.0
+[DZ.4_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.4_1_AC V2G]   ≤ -0.0
+[DZ.5_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.5_1_AC V2G]   ≤ -0.0
+[DZ.6_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.6_1_AC V2G]   ≤ -0.0
+[DZ.7_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.7_1_AC V2G]   ≤ -0.0
+[DZ.8_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.8_1_AC V2G]   ≤ -0.0
+[DZ.9_1_AC V2G]: +1 Link-p[2013-01-11 00:00:00, DZ.9_1_AC V2G]   ≤ -0.0
+
+- Link-ext-p-lower | shape = (73, 2836)
+  ↳ No description available.
+    • Constraint `Link-ext-p-lower` (Link-ext: 2836):
+-----------------------------------------------
+[DZ.10_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC co2 vent]                 ≥ -0.0
+[DZ.11_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.11_1_AC co2 vent]                 ≥ -0.0
+[DZ.12_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.12_1_AC co2 vent]                 ≥ -0.0
+[DZ.13_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.13_1_AC co2 vent]                 ≥ -0.0
+[DZ.14_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.14_1_AC co2 vent]                 ≥ -0.0
+[DZ.15_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.15_1_AC co2 vent]                 ≥ -0.0
+[DZ.16_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.16_1_AC co2 vent]                 ≥ -0.0
+		...
+[DZ.5_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.5_1_AC urban central DAC] ≥ -0.0
+[DZ.6_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.6_1_AC urban central DAC] ≥ -0.0
+[DZ.7_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.7_1_AC urban central DAC] ≥ -0.0
+[DZ.8_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.8_1_AC urban central DAC] ≥ -0.0
+[DZ.9_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.9_1_AC urban central DAC] ≥ -0.0
+[DZ.4_1_AC H2 export]: +1 Link-p[2013-01-01 00:00:00, DZ.4_1_AC H2 export]                 ≥ -0.0
+[DZ.32_1_AC H2 export]: +1 Link-p[2013-01-01 00:00:00, DZ.32_1_AC H2 export]               ≥ -0.0
+    • Constraint `Link-ext-p-lower` (Link-ext: 2836):
+-----------------------------------------------
+[DZ.10_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC co2 vent]                 ≥ -0.0
+[DZ.11_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.11_1_AC co2 vent]                 ≥ -0.0
+[DZ.12_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.12_1_AC co2 vent]                 ≥ -0.0
+[DZ.13_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.13_1_AC co2 vent]                 ≥ -0.0
+[DZ.14_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.14_1_AC co2 vent]                 ≥ -0.0
+[DZ.15_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.15_1_AC co2 vent]                 ≥ -0.0
+[DZ.16_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.16_1_AC co2 vent]                 ≥ -0.0
+		...
+[DZ.5_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.5_1_AC urban central DAC] ≥ -0.0
+[DZ.6_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.6_1_AC urban central DAC] ≥ -0.0
+[DZ.7_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.7_1_AC urban central DAC] ≥ -0.0
+[DZ.8_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.8_1_AC urban central DAC] ≥ -0.0
+[DZ.9_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.9_1_AC urban central DAC] ≥ -0.0
+[DZ.4_1_AC H2 export]: +1 Link-p[2013-01-06 00:00:00, DZ.4_1_AC H2 export]                 ≥ -0.0
+[DZ.32_1_AC H2 export]: +1 Link-p[2013-01-06 00:00:00, DZ.32_1_AC H2 export]               ≥ -0.0
+    • Constraint `Link-ext-p-lower` (Link-ext: 2836):
+-----------------------------------------------
+[DZ.10_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC co2 vent]                 ≥ -0.0
+[DZ.11_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.11_1_AC co2 vent]                 ≥ -0.0
+[DZ.12_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.12_1_AC co2 vent]                 ≥ -0.0
+[DZ.13_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.13_1_AC co2 vent]                 ≥ -0.0
+[DZ.14_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.14_1_AC co2 vent]                 ≥ -0.0
+[DZ.15_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.15_1_AC co2 vent]                 ≥ -0.0
+[DZ.16_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.16_1_AC co2 vent]                 ≥ -0.0
+		...
+[DZ.5_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.5_1_AC urban central DAC] ≥ -0.0
+[DZ.6_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.6_1_AC urban central DAC] ≥ -0.0
+[DZ.7_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.7_1_AC urban central DAC] ≥ -0.0
+[DZ.8_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.8_1_AC urban central DAC] ≥ -0.0
+[DZ.9_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.9_1_AC urban central DAC] ≥ -0.0
+[DZ.4_1_AC H2 export]: +1 Link-p[2013-01-11 00:00:00, DZ.4_1_AC H2 export]                 ≥ -0.0
+[DZ.32_1_AC H2 export]: +1 Link-p[2013-01-11 00:00:00, DZ.32_1_AC H2 export]               ≥ -0.0
+
+- Link-ext-p-upper | shape = (73, 2836)
+  ↳ No description available.
+    • Constraint `Link-ext-p-upper` (Link-ext: 2836):
+-----------------------------------------------
+[DZ.10_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC co2 vent] - 1 Link-p_nom[DZ.10_1_AC co2 vent]                         ≤ -0.0
+[DZ.11_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.11_1_AC co2 vent] - 1 Link-p_nom[DZ.11_1_AC co2 vent]                         ≤ -0.0
+[DZ.12_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.12_1_AC co2 vent] - 1 Link-p_nom[DZ.12_1_AC co2 vent]                         ≤ -0.0
+[DZ.13_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.13_1_AC co2 vent] - 1 Link-p_nom[DZ.13_1_AC co2 vent]                         ≤ -0.0
+[DZ.14_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.14_1_AC co2 vent] - 1 Link-p_nom[DZ.14_1_AC co2 vent]                         ≤ -0.0
+[DZ.15_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.15_1_AC co2 vent] - 1 Link-p_nom[DZ.15_1_AC co2 vent]                         ≤ -0.0
+[DZ.16_1_AC co2 vent]: +1 Link-p[2013-01-01 00:00:00, DZ.16_1_AC co2 vent] - 1 Link-p_nom[DZ.16_1_AC co2 vent]                         ≤ -0.0
+		...
+[DZ.5_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.5_1_AC urban central DAC] - 1 Link-p_nom[DZ.5_1_AC urban central DAC] ≤ -0.0
+[DZ.6_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.6_1_AC urban central DAC] - 1 Link-p_nom[DZ.6_1_AC urban central DAC] ≤ -0.0
+[DZ.7_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.7_1_AC urban central DAC] - 1 Link-p_nom[DZ.7_1_AC urban central DAC] ≤ -0.0
+[DZ.8_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.8_1_AC urban central DAC] - 1 Link-p_nom[DZ.8_1_AC urban central DAC] ≤ -0.0
+[DZ.9_1_AC urban central DAC]: +1 Link-p[2013-01-01 00:00:00, DZ.9_1_AC urban central DAC] - 1 Link-p_nom[DZ.9_1_AC urban central DAC] ≤ -0.0
+[DZ.4_1_AC H2 export]: +1 Link-p[2013-01-01 00:00:00, DZ.4_1_AC H2 export] - 1 Link-p_nom[DZ.4_1_AC H2 export]                         ≤ -0.0
+[DZ.32_1_AC H2 export]: +1 Link-p[2013-01-01 00:00:00, DZ.32_1_AC H2 export] - 1 Link-p_nom[DZ.32_1_AC H2 export]                      ≤ -0.0
+    • Constraint `Link-ext-p-upper` (Link-ext: 2836):
+-----------------------------------------------
+[DZ.10_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC co2 vent] - 1 Link-p_nom[DZ.10_1_AC co2 vent]                         ≤ -0.0
+[DZ.11_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.11_1_AC co2 vent] - 1 Link-p_nom[DZ.11_1_AC co2 vent]                         ≤ -0.0
+[DZ.12_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.12_1_AC co2 vent] - 1 Link-p_nom[DZ.12_1_AC co2 vent]                         ≤ -0.0
+[DZ.13_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.13_1_AC co2 vent] - 1 Link-p_nom[DZ.13_1_AC co2 vent]                         ≤ -0.0
+[DZ.14_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.14_1_AC co2 vent] - 1 Link-p_nom[DZ.14_1_AC co2 vent]                         ≤ -0.0
+[DZ.15_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.15_1_AC co2 vent] - 1 Link-p_nom[DZ.15_1_AC co2 vent]                         ≤ -0.0
+[DZ.16_1_AC co2 vent]: +1 Link-p[2013-01-06 00:00:00, DZ.16_1_AC co2 vent] - 1 Link-p_nom[DZ.16_1_AC co2 vent]                         ≤ -0.0
+		...
+[DZ.5_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.5_1_AC urban central DAC] - 1 Link-p_nom[DZ.5_1_AC urban central DAC] ≤ -0.0
+[DZ.6_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.6_1_AC urban central DAC] - 1 Link-p_nom[DZ.6_1_AC urban central DAC] ≤ -0.0
+[DZ.7_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.7_1_AC urban central DAC] - 1 Link-p_nom[DZ.7_1_AC urban central DAC] ≤ -0.0
+[DZ.8_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.8_1_AC urban central DAC] - 1 Link-p_nom[DZ.8_1_AC urban central DAC] ≤ -0.0
+[DZ.9_1_AC urban central DAC]: +1 Link-p[2013-01-06 00:00:00, DZ.9_1_AC urban central DAC] - 1 Link-p_nom[DZ.9_1_AC urban central DAC] ≤ -0.0
+[DZ.4_1_AC H2 export]: +1 Link-p[2013-01-06 00:00:00, DZ.4_1_AC H2 export] - 1 Link-p_nom[DZ.4_1_AC H2 export]                         ≤ -0.0
+[DZ.32_1_AC H2 export]: +1 Link-p[2013-01-06 00:00:00, DZ.32_1_AC H2 export] - 1 Link-p_nom[DZ.32_1_AC H2 export]                      ≤ -0.0
+    • Constraint `Link-ext-p-upper` (Link-ext: 2836):
+-----------------------------------------------
+[DZ.10_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC co2 vent] - 1 Link-p_nom[DZ.10_1_AC co2 vent]                         ≤ -0.0
+[DZ.11_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.11_1_AC co2 vent] - 1 Link-p_nom[DZ.11_1_AC co2 vent]                         ≤ -0.0
+[DZ.12_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.12_1_AC co2 vent] - 1 Link-p_nom[DZ.12_1_AC co2 vent]                         ≤ -0.0
+[DZ.13_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.13_1_AC co2 vent] - 1 Link-p_nom[DZ.13_1_AC co2 vent]                         ≤ -0.0
+[DZ.14_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.14_1_AC co2 vent] - 1 Link-p_nom[DZ.14_1_AC co2 vent]                         ≤ -0.0
+[DZ.15_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.15_1_AC co2 vent] - 1 Link-p_nom[DZ.15_1_AC co2 vent]                         ≤ -0.0
+[DZ.16_1_AC co2 vent]: +1 Link-p[2013-01-11 00:00:00, DZ.16_1_AC co2 vent] - 1 Link-p_nom[DZ.16_1_AC co2 vent]                         ≤ -0.0
+		...
+[DZ.5_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.5_1_AC urban central DAC] - 1 Link-p_nom[DZ.5_1_AC urban central DAC] ≤ -0.0
+[DZ.6_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.6_1_AC urban central DAC] - 1 Link-p_nom[DZ.6_1_AC urban central DAC] ≤ -0.0
+[DZ.7_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.7_1_AC urban central DAC] - 1 Link-p_nom[DZ.7_1_AC urban central DAC] ≤ -0.0
+[DZ.8_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.8_1_AC urban central DAC] - 1 Link-p_nom[DZ.8_1_AC urban central DAC] ≤ -0.0
+[DZ.9_1_AC urban central DAC]: +1 Link-p[2013-01-11 00:00:00, DZ.9_1_AC urban central DAC] - 1 Link-p_nom[DZ.9_1_AC urban central DAC] ≤ -0.0
+[DZ.4_1_AC H2 export]: +1 Link-p[2013-01-11 00:00:00, DZ.4_1_AC H2 export] - 1 Link-p_nom[DZ.4_1_AC H2 export]                         ≤ -0.0
+[DZ.32_1_AC H2 export]: +1 Link-p[2013-01-11 00:00:00, DZ.32_1_AC H2 export] - 1 Link-p_nom[DZ.32_1_AC H2 export]                      ≤ -0.0
+
+- Store-fix-e-lower | shape = (73, 141)
+  ↳ No description available.
+    • Constraint `Store-fix-e-lower` (Store-fix: 141):
+------------------------------------------------
+[DZ.10_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.10_1_AC biogas]                   ≥ -0.0
+[DZ.11_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.11_1_AC biogas]                   ≥ -0.0
+[DZ.12_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.12_1_AC biogas]                   ≥ -0.0
+[DZ.13_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.13_1_AC biogas]                   ≥ -0.0
+[DZ.14_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.14_1_AC biogas]                   ≥ -0.0
+[DZ.15_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.15_1_AC biogas]                   ≥ -0.0
+[DZ.16_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.16_1_AC biogas]                   ≥ -0.0
+		...
+[DZ.48_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.48_1_AC battery storage] ≥ -0.0
+[DZ.4_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.4_1_AC battery storage]   ≥ -0.0
+[DZ.5_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.5_1_AC battery storage]   ≥ -0.0
+[DZ.6_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.6_1_AC battery storage]   ≥ -0.0
+[DZ.7_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.7_1_AC battery storage]   ≥ -0.0
+[DZ.8_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.8_1_AC battery storage]   ≥ -0.0
+[DZ.9_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.9_1_AC battery storage]   ≥ -0.0
+    • Constraint `Store-fix-e-lower` (Store-fix: 141):
+------------------------------------------------
+[DZ.10_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.10_1_AC biogas]                   ≥ -0.0
+[DZ.11_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.11_1_AC biogas]                   ≥ -0.0
+[DZ.12_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.12_1_AC biogas]                   ≥ -0.0
+[DZ.13_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.13_1_AC biogas]                   ≥ -0.0
+[DZ.14_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.14_1_AC biogas]                   ≥ -0.0
+[DZ.15_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.15_1_AC biogas]                   ≥ -0.0
+[DZ.16_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.16_1_AC biogas]                   ≥ -0.0
+		...
+[DZ.48_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.48_1_AC battery storage] ≥ -0.0
+[DZ.4_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.4_1_AC battery storage]   ≥ -0.0
+[DZ.5_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.5_1_AC battery storage]   ≥ -0.0
+[DZ.6_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.6_1_AC battery storage]   ≥ -0.0
+[DZ.7_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.7_1_AC battery storage]   ≥ -0.0
+[DZ.8_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.8_1_AC battery storage]   ≥ -0.0
+[DZ.9_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.9_1_AC battery storage]   ≥ -0.0
+    • Constraint `Store-fix-e-lower` (Store-fix: 141):
+------------------------------------------------
+[DZ.10_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.10_1_AC biogas]                   ≥ -0.0
+[DZ.11_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.11_1_AC biogas]                   ≥ -0.0
+[DZ.12_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.12_1_AC biogas]                   ≥ -0.0
+[DZ.13_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.13_1_AC biogas]                   ≥ -0.0
+[DZ.14_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.14_1_AC biogas]                   ≥ -0.0
+[DZ.15_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.15_1_AC biogas]                   ≥ -0.0
+[DZ.16_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.16_1_AC biogas]                   ≥ -0.0
+		...
+[DZ.48_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.48_1_AC battery storage] ≥ -0.0
+[DZ.4_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.4_1_AC battery storage]   ≥ -0.0
+[DZ.5_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.5_1_AC battery storage]   ≥ -0.0
+[DZ.6_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.6_1_AC battery storage]   ≥ -0.0
+[DZ.7_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.7_1_AC battery storage]   ≥ -0.0
+[DZ.8_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.8_1_AC battery storage]   ≥ -0.0
+[DZ.9_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.9_1_AC battery storage]   ≥ -0.0
+
+- Store-fix-e-upper | shape = (73, 141)
+  ↳ No description available.
+    • Constraint `Store-fix-e-upper` (Store-fix: 141):
+------------------------------------------------
+[DZ.10_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.10_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.11_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.11_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.12_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.12_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.13_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.13_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.14_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.14_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.15_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.15_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.16_1_AC biogas]: +1 Store-e[2013-01-01 00:00:00, DZ.16_1_AC biogas]                   ≤ 10638.297872340425
+		...
+[DZ.48_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.48_1_AC battery storage] ≤ -0.0
+[DZ.4_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.4_1_AC battery storage]   ≤ -0.0
+[DZ.5_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.5_1_AC battery storage]   ≤ -0.0
+[DZ.6_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.6_1_AC battery storage]   ≤ -0.0
+[DZ.7_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.7_1_AC battery storage]   ≤ -0.0
+[DZ.8_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.8_1_AC battery storage]   ≤ -0.0
+[DZ.9_1_AC battery storage]: +1 Store-e[2013-01-01 00:00:00, DZ.9_1_AC battery storage]   ≤ -0.0
+    • Constraint `Store-fix-e-upper` (Store-fix: 141):
+------------------------------------------------
+[DZ.10_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.10_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.11_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.11_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.12_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.12_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.13_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.13_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.14_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.14_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.15_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.15_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.16_1_AC biogas]: +1 Store-e[2013-01-06 00:00:00, DZ.16_1_AC biogas]                   ≤ 10638.297872340425
+		...
+[DZ.48_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.48_1_AC battery storage] ≤ -0.0
+[DZ.4_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.4_1_AC battery storage]   ≤ -0.0
+[DZ.5_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.5_1_AC battery storage]   ≤ -0.0
+[DZ.6_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.6_1_AC battery storage]   ≤ -0.0
+[DZ.7_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.7_1_AC battery storage]   ≤ -0.0
+[DZ.8_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.8_1_AC battery storage]   ≤ -0.0
+[DZ.9_1_AC battery storage]: +1 Store-e[2013-01-06 00:00:00, DZ.9_1_AC battery storage]   ≤ -0.0
+    • Constraint `Store-fix-e-upper` (Store-fix: 141):
+------------------------------------------------
+[DZ.10_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.10_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.11_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.11_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.12_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.12_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.13_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.13_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.14_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.14_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.15_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.15_1_AC biogas]                   ≤ 10638.297872340425
+[DZ.16_1_AC biogas]: +1 Store-e[2013-01-11 00:00:00, DZ.16_1_AC biogas]                   ≤ 10638.297872340425
+		...
+[DZ.48_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.48_1_AC battery storage] ≤ -0.0
+[DZ.4_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.4_1_AC battery storage]   ≤ -0.0
+[DZ.5_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.5_1_AC battery storage]   ≤ -0.0
+[DZ.6_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.6_1_AC battery storage]   ≤ -0.0
+[DZ.7_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.7_1_AC battery storage]   ≤ -0.0
+[DZ.8_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.8_1_AC battery storage]   ≤ -0.0
+[DZ.9_1_AC battery storage]: +1 Store-e[2013-01-11 00:00:00, DZ.9_1_AC battery storage]   ≤ -0.0
+
+- Store-ext-e-lower | shape = (73, 614)
+  ↳ No description available.
+    • Constraint `Store-ext-e-lower` (Store-ext: 614):
+------------------------------------------------
+[co2 atmosphere]: +1 Store-e[2013-01-01 00:00:00, co2 atmosphere] + 1 Store-e_nom[co2 atmosphere] ≥ -0.0
+[DZ.10_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.10_1_AC co2 stored]                   ≥ -0.0
+[DZ.11_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.11_1_AC co2 stored]                   ≥ -0.0
+[DZ.12_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.12_1_AC co2 stored]                   ≥ -0.0
+[DZ.13_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.13_1_AC co2 stored]                   ≥ -0.0
+[DZ.14_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.14_1_AC co2 stored]                   ≥ -0.0
+[DZ.15_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.15_1_AC co2 stored]                   ≥ -0.0
+		...
+[DZ.4_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.4_1_AC home battery]                 ≥ -0.0
+[DZ.5_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.5_1_AC home battery]                 ≥ -0.0
+[DZ.6_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.6_1_AC home battery]                 ≥ -0.0
+[DZ.7_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.7_1_AC home battery]                 ≥ -0.0
+[DZ.8_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.8_1_AC home battery]                 ≥ -0.0
+[DZ.9_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.9_1_AC home battery]                 ≥ -0.0
+[H2 export store]: +1 Store-e[2013-01-01 00:00:00, H2 export store]                               ≥ -0.0
+    • Constraint `Store-ext-e-lower` (Store-ext: 614):
+------------------------------------------------
+[co2 atmosphere]: +1 Store-e[2013-01-06 00:00:00, co2 atmosphere] + 1 Store-e_nom[co2 atmosphere] ≥ -0.0
+[DZ.10_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.10_1_AC co2 stored]                   ≥ -0.0
+[DZ.11_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.11_1_AC co2 stored]                   ≥ -0.0
+[DZ.12_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.12_1_AC co2 stored]                   ≥ -0.0
+[DZ.13_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.13_1_AC co2 stored]                   ≥ -0.0
+[DZ.14_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.14_1_AC co2 stored]                   ≥ -0.0
+[DZ.15_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.15_1_AC co2 stored]                   ≥ -0.0
+		...
+[DZ.4_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.4_1_AC home battery]                 ≥ -0.0
+[DZ.5_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.5_1_AC home battery]                 ≥ -0.0
+[DZ.6_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.6_1_AC home battery]                 ≥ -0.0
+[DZ.7_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.7_1_AC home battery]                 ≥ -0.0
+[DZ.8_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.8_1_AC home battery]                 ≥ -0.0
+[DZ.9_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.9_1_AC home battery]                 ≥ -0.0
+[H2 export store]: +1 Store-e[2013-01-06 00:00:00, H2 export store]                               ≥ -0.0
+    • Constraint `Store-ext-e-lower` (Store-ext: 614):
+------------------------------------------------
+[co2 atmosphere]: +1 Store-e[2013-01-11 00:00:00, co2 atmosphere] + 1 Store-e_nom[co2 atmosphere] ≥ -0.0
+[DZ.10_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.10_1_AC co2 stored]                   ≥ -0.0
+[DZ.11_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.11_1_AC co2 stored]                   ≥ -0.0
+[DZ.12_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.12_1_AC co2 stored]                   ≥ -0.0
+[DZ.13_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.13_1_AC co2 stored]                   ≥ -0.0
+[DZ.14_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.14_1_AC co2 stored]                   ≥ -0.0
+[DZ.15_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.15_1_AC co2 stored]                   ≥ -0.0
+		...
+[DZ.4_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.4_1_AC home battery]                 ≥ -0.0
+[DZ.5_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.5_1_AC home battery]                 ≥ -0.0
+[DZ.6_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.6_1_AC home battery]                 ≥ -0.0
+[DZ.7_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.7_1_AC home battery]                 ≥ -0.0
+[DZ.8_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.8_1_AC home battery]                 ≥ -0.0
+[DZ.9_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.9_1_AC home battery]                 ≥ -0.0
+[H2 export store]: +1 Store-e[2013-01-11 00:00:00, H2 export store]                               ≥ -0.0
+
+- Store-ext-e-upper | shape = (73, 614)
+  ↳ No description available.
+    • Constraint `Store-ext-e-upper` (Store-ext: 614):
+------------------------------------------------
+[co2 atmosphere]: +1 Store-e[2013-01-01 00:00:00, co2 atmosphere] - 1 Store-e_nom[co2 atmosphere]                         ≤ -0.0
+[DZ.10_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.10_1_AC co2 stored] - 1 Store-e_nom[DZ.10_1_AC co2 stored]    ≤ -0.0
+[DZ.11_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.11_1_AC co2 stored] - 1 Store-e_nom[DZ.11_1_AC co2 stored]    ≤ -0.0
+[DZ.12_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.12_1_AC co2 stored] - 1 Store-e_nom[DZ.12_1_AC co2 stored]    ≤ -0.0
+[DZ.13_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.13_1_AC co2 stored] - 1 Store-e_nom[DZ.13_1_AC co2 stored]    ≤ -0.0
+[DZ.14_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.14_1_AC co2 stored] - 1 Store-e_nom[DZ.14_1_AC co2 stored]    ≤ -0.0
+[DZ.15_1_AC co2 stored]: +1 Store-e[2013-01-01 00:00:00, DZ.15_1_AC co2 stored] - 1 Store-e_nom[DZ.15_1_AC co2 stored]    ≤ -0.0
+		...
+[DZ.4_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.4_1_AC home battery] - 1 Store-e_nom[DZ.4_1_AC home battery] ≤ -0.0
+[DZ.5_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.5_1_AC home battery] - 1 Store-e_nom[DZ.5_1_AC home battery] ≤ -0.0
+[DZ.6_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.6_1_AC home battery] - 1 Store-e_nom[DZ.6_1_AC home battery] ≤ -0.0
+[DZ.7_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.7_1_AC home battery] - 1 Store-e_nom[DZ.7_1_AC home battery] ≤ -0.0
+[DZ.8_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.8_1_AC home battery] - 1 Store-e_nom[DZ.8_1_AC home battery] ≤ -0.0
+[DZ.9_1_AC home battery]: +1 Store-e[2013-01-01 00:00:00, DZ.9_1_AC home battery] - 1 Store-e_nom[DZ.9_1_AC home battery] ≤ -0.0
+[H2 export store]: +1 Store-e[2013-01-01 00:00:00, H2 export store] - 1 Store-e_nom[H2 export store]                      ≤ -0.0
+    • Constraint `Store-ext-e-upper` (Store-ext: 614):
+------------------------------------------------
+[co2 atmosphere]: +1 Store-e[2013-01-06 00:00:00, co2 atmosphere] - 1 Store-e_nom[co2 atmosphere]                         ≤ -0.0
+[DZ.10_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.10_1_AC co2 stored] - 1 Store-e_nom[DZ.10_1_AC co2 stored]    ≤ -0.0
+[DZ.11_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.11_1_AC co2 stored] - 1 Store-e_nom[DZ.11_1_AC co2 stored]    ≤ -0.0
+[DZ.12_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.12_1_AC co2 stored] - 1 Store-e_nom[DZ.12_1_AC co2 stored]    ≤ -0.0
+[DZ.13_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.13_1_AC co2 stored] - 1 Store-e_nom[DZ.13_1_AC co2 stored]    ≤ -0.0
+[DZ.14_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.14_1_AC co2 stored] - 1 Store-e_nom[DZ.14_1_AC co2 stored]    ≤ -0.0
+[DZ.15_1_AC co2 stored]: +1 Store-e[2013-01-06 00:00:00, DZ.15_1_AC co2 stored] - 1 Store-e_nom[DZ.15_1_AC co2 stored]    ≤ -0.0
+		...
+[DZ.4_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.4_1_AC home battery] - 1 Store-e_nom[DZ.4_1_AC home battery] ≤ -0.0
+[DZ.5_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.5_1_AC home battery] - 1 Store-e_nom[DZ.5_1_AC home battery] ≤ -0.0
+[DZ.6_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.6_1_AC home battery] - 1 Store-e_nom[DZ.6_1_AC home battery] ≤ -0.0
+[DZ.7_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.7_1_AC home battery] - 1 Store-e_nom[DZ.7_1_AC home battery] ≤ -0.0
+[DZ.8_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.8_1_AC home battery] - 1 Store-e_nom[DZ.8_1_AC home battery] ≤ -0.0
+[DZ.9_1_AC home battery]: +1 Store-e[2013-01-06 00:00:00, DZ.9_1_AC home battery] - 1 Store-e_nom[DZ.9_1_AC home battery] ≤ -0.0
+[H2 export store]: +1 Store-e[2013-01-06 00:00:00, H2 export store] - 1 Store-e_nom[H2 export store]                      ≤ -0.0
+    • Constraint `Store-ext-e-upper` (Store-ext: 614):
+------------------------------------------------
+[co2 atmosphere]: +1 Store-e[2013-01-11 00:00:00, co2 atmosphere] - 1 Store-e_nom[co2 atmosphere]                         ≤ -0.0
+[DZ.10_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.10_1_AC co2 stored] - 1 Store-e_nom[DZ.10_1_AC co2 stored]    ≤ -0.0
+[DZ.11_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.11_1_AC co2 stored] - 1 Store-e_nom[DZ.11_1_AC co2 stored]    ≤ -0.0
+[DZ.12_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.12_1_AC co2 stored] - 1 Store-e_nom[DZ.12_1_AC co2 stored]    ≤ -0.0
+[DZ.13_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.13_1_AC co2 stored] - 1 Store-e_nom[DZ.13_1_AC co2 stored]    ≤ -0.0
+[DZ.14_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.14_1_AC co2 stored] - 1 Store-e_nom[DZ.14_1_AC co2 stored]    ≤ -0.0
+[DZ.15_1_AC co2 stored]: +1 Store-e[2013-01-11 00:00:00, DZ.15_1_AC co2 stored] - 1 Store-e_nom[DZ.15_1_AC co2 stored]    ≤ -0.0
+		...
+[DZ.4_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.4_1_AC home battery] - 1 Store-e_nom[DZ.4_1_AC home battery] ≤ -0.0
+[DZ.5_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.5_1_AC home battery] - 1 Store-e_nom[DZ.5_1_AC home battery] ≤ -0.0
+[DZ.6_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.6_1_AC home battery] - 1 Store-e_nom[DZ.6_1_AC home battery] ≤ -0.0
+[DZ.7_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.7_1_AC home battery] - 1 Store-e_nom[DZ.7_1_AC home battery] ≤ -0.0
+[DZ.8_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.8_1_AC home battery] - 1 Store-e_nom[DZ.8_1_AC home battery] ≤ -0.0
+[DZ.9_1_AC home battery]: +1 Store-e[2013-01-11 00:00:00, DZ.9_1_AC home battery] - 1 Store-e_nom[DZ.9_1_AC home battery] ≤ -0.0
+[H2 export store]: +1 Store-e[2013-01-11 00:00:00, H2 export store] - 1 Store-e_nom[H2 export store]                      ≤ -0.0
+
+- StorageUnit-fix-p_dispatch-lower | shape = (73, 1)
+  ↳ No description available.
+    • Constraint `StorageUnit-fix-p_dispatch-lower` (StorageUnit-fix: 1):
+-------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_dispatch[2013-01-01 00:00:00, DZ.8_1_AC hydro] ≥ -0.0
+    • Constraint `StorageUnit-fix-p_dispatch-lower` (StorageUnit-fix: 1):
+-------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_dispatch[2013-01-06 00:00:00, DZ.8_1_AC hydro] ≥ -0.0
+    • Constraint `StorageUnit-fix-p_dispatch-lower` (StorageUnit-fix: 1):
+-------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_dispatch[2013-01-11 00:00:00, DZ.8_1_AC hydro] ≥ -0.0
+
+- StorageUnit-fix-p_dispatch-upper | shape = (73, 1)
+  ↳ No description available.
+    • Constraint `StorageUnit-fix-p_dispatch-upper` (StorageUnit-fix: 1):
+-------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_dispatch[2013-01-01 00:00:00, DZ.8_1_AC hydro] ≤ 100.0
+    • Constraint `StorageUnit-fix-p_dispatch-upper` (StorageUnit-fix: 1):
+-------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_dispatch[2013-01-06 00:00:00, DZ.8_1_AC hydro] ≤ 100.0
+    • Constraint `StorageUnit-fix-p_dispatch-upper` (StorageUnit-fix: 1):
+-------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_dispatch[2013-01-11 00:00:00, DZ.8_1_AC hydro] ≤ 100.0
+
+- StorageUnit-fix-p_store-lower | shape = (73, 1)
+  ↳ No description available.
+    • Constraint `StorageUnit-fix-p_store-lower` (StorageUnit-fix: 1):
+----------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_store[2013-01-01 00:00:00, DZ.8_1_AC hydro] ≥ -0.0
+    • Constraint `StorageUnit-fix-p_store-lower` (StorageUnit-fix: 1):
+----------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_store[2013-01-06 00:00:00, DZ.8_1_AC hydro] ≥ -0.0
+    • Constraint `StorageUnit-fix-p_store-lower` (StorageUnit-fix: 1):
+----------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_store[2013-01-11 00:00:00, DZ.8_1_AC hydro] ≥ -0.0
+
+- StorageUnit-fix-p_store-upper | shape = (73, 1)
+  ↳ No description available.
+    • Constraint `StorageUnit-fix-p_store-upper` (StorageUnit-fix: 1):
+----------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_store[2013-01-01 00:00:00, DZ.8_1_AC hydro] ≤ -0.0
+    • Constraint `StorageUnit-fix-p_store-upper` (StorageUnit-fix: 1):
+----------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_store[2013-01-06 00:00:00, DZ.8_1_AC hydro] ≤ -0.0
+    • Constraint `StorageUnit-fix-p_store-upper` (StorageUnit-fix: 1):
+----------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-p_store[2013-01-11 00:00:00, DZ.8_1_AC hydro] ≤ -0.0
+
+- StorageUnit-fix-state_of_charge-lower | shape = (73, 1)
+  ↳ No description available.
+    • Constraint `StorageUnit-fix-state_of_charge-lower` (StorageUnit-fix: 1):
+------------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-state_of_charge[2013-01-01 00:00:00, DZ.8_1_AC hydro] ≥ -0.0
+    • Constraint `StorageUnit-fix-state_of_charge-lower` (StorageUnit-fix: 1):
+------------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-state_of_charge[2013-01-06 00:00:00, DZ.8_1_AC hydro] ≥ -0.0
+    • Constraint `StorageUnit-fix-state_of_charge-lower` (StorageUnit-fix: 1):
+------------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-state_of_charge[2013-01-11 00:00:00, DZ.8_1_AC hydro] ≥ -0.0
+
+- StorageUnit-fix-state_of_charge-upper | shape = (73, 1)
+  ↳ No description available.
+    • Constraint `StorageUnit-fix-state_of_charge-upper` (StorageUnit-fix: 1):
+------------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-state_of_charge[2013-01-01 00:00:00, DZ.8_1_AC hydro] ≤ 271062.8395473055
+    • Constraint `StorageUnit-fix-state_of_charge-upper` (StorageUnit-fix: 1):
+------------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-state_of_charge[2013-01-06 00:00:00, DZ.8_1_AC hydro] ≤ 271062.8395473055
+    • Constraint `StorageUnit-fix-state_of_charge-upper` (StorageUnit-fix: 1):
+------------------------------------------------------------------------
+[DZ.8_1_AC hydro]: +1 StorageUnit-state_of_charge[2013-01-11 00:00:00, DZ.8_1_AC hydro] ≤ 271062.8395473055
+
+- Bus-nodal_balance | shape = (1008, 73)
+  ↳ No description available.
+    • Constraint `Bus-nodal_balance` (snapshot: 73):
+----------------------------------------------
+[2013-01-01 00:00:00]: +1 Store-p[2013-01-01 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-01-01 00:00:00, DZ.10_1_AC BEV charger] = -0.025998763625721136
+[2013-01-06 00:00:00]: +1 Store-p[2013-01-06 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-01-06 00:00:00, DZ.10_1_AC BEV charger] = -0.03779148167033013
+[2013-01-11 00:00:00]: +1 Store-p[2013-01-11 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-01-11 00:00:00, DZ.10_1_AC BEV charger] = -0.02960205087344347
+[2013-01-16 00:00:00]: +1 Store-p[2013-01-16 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-01-16 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-01-16 00:00:00, DZ.10_1_AC BEV charger] = -0.025027132155856502
+[2013-01-21 00:00:00]: +1 Store-p[2013-01-21 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-01-21 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-01-21 00:00:00, DZ.10_1_AC BEV charger] = -0.02751725843704758
+[2013-01-26 00:00:00]: +1 Store-p[2013-01-26 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-01-26 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-01-26 00:00:00, DZ.10_1_AC BEV charger] = -0.04256667002675544
+[2013-01-31 00:00:00]: +1 Store-p[2013-01-31 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-01-31 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-01-31 00:00:00, DZ.10_1_AC BEV charger] = -0.02736559326399847
+		...
+[2013-11-27 00:00:00]: +1 Store-p[2013-11-27 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-11-27 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-11-27 00:00:00, DZ.10_1_AC BEV charger] = -0.02557809967546806
+[2013-12-02 00:00:00]: +1 Store-p[2013-12-02 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-12-02 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-12-02 00:00:00, DZ.10_1_AC BEV charger] = -0.027821386232868273
+[2013-12-07 00:00:00]: +1 Store-p[2013-12-07 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-12-07 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-12-07 00:00:00, DZ.10_1_AC BEV charger] = -0.041756219801142525
+[2013-12-12 00:00:00]: +1 Store-p[2013-12-12 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-12-12 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-12-12 00:00:00, DZ.10_1_AC BEV charger] = -0.02792151313619673
+[2013-12-17 00:00:00]: +1 Store-p[2013-12-17 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-12-17 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-12-17 00:00:00, DZ.10_1_AC BEV charger] = -0.02423284585052152
+[2013-12-22 00:00:00]: +1 Store-p[2013-12-22 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-12-22 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-12-22 00:00:00, DZ.10_1_AC BEV charger] = -0.036678369946855645
+[2013-12-27 00:00:00]: +1 Store-p[2013-12-27 00:00:00, DZ.10_1_AC battery storage] - 1 Link-p[2013-12-27 00:00:00, DZ.10_1_AC V2G] + 0.9 Link-p[2013-12-27 00:00:00, DZ.10_1_AC BEV charger] = -0.02882147684912939
+    • Constraint `Bus-nodal_balance` (snapshot: 73):
+----------------------------------------------
+[2013-01-01 00:00:00]: +1 Store-p[2013-01-01 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-01-01 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-01-01 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-01-01 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-01-01 00:00:00, DZ.10_1_AC SMR] = -0.035954037824835576
+[2013-01-06 00:00:00]: +1 Store-p[2013-01-06 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-01-06 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-01-06 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-01-06 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-01-06 00:00:00, DZ.10_1_AC SMR] = -0.05404322900944305
+[2013-01-11 00:00:00]: +1 Store-p[2013-01-11 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-01-11 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-01-11 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-01-11 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-01-11 00:00:00, DZ.10_1_AC SMR] = -0.04060132295485591
+[2013-01-16 00:00:00]: +1 Store-p[2013-01-16 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-01-16 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-01-16 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-01-16 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-01-16 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-01-16 00:00:00, DZ.10_1_AC SMR] = -0.03530391971936119
+[2013-01-21 00:00:00]: +1 Store-p[2013-01-21 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-01-21 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-01-21 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-01-21 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-01-21 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-01-21 00:00:00, DZ.10_1_AC SMR] = -0.03853395087048297
+[2013-01-26 00:00:00]: +1 Store-p[2013-01-26 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-01-26 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-01-26 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-01-26 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-01-26 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-01-26 00:00:00, DZ.10_1_AC SMR] = -0.06018589638706372
+[2013-01-31 00:00:00]: +1 Store-p[2013-01-31 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-01-31 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-01-31 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-01-31 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-01-31 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-01-31 00:00:00, DZ.10_1_AC SMR] = -0.037862046328959106
+		...
+[2013-11-27 00:00:00]: +1 Store-p[2013-11-27 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-11-27 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-11-27 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-11-27 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-11-27 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-11-27 00:00:00, DZ.10_1_AC SMR] = -0.03616479355304464
+[2013-12-02 00:00:00]: +1 Store-p[2013-12-02 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-12-02 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-12-02 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-12-02 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-12-02 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-12-02 00:00:00, DZ.10_1_AC SMR] = -0.03892277287980375
+[2013-12-07 00:00:00]: +1 Store-p[2013-12-07 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-12-07 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-12-07 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-12-07 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-12-07 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-12-07 00:00:00, DZ.10_1_AC SMR] = -0.05925897471015711
+[2013-12-12 00:00:00]: +1 Store-p[2013-12-12 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-12-12 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-12-12 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-12-12 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-12-12 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-12-12 00:00:00, DZ.10_1_AC SMR] = -0.038569232655074254
+[2013-12-17 00:00:00]: +1 Store-p[2013-12-17 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-12-17 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-12-17 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-12-17 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-12-17 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-12-17 00:00:00, DZ.10_1_AC SMR] = -0.03545815963877141
+[2013-12-22 00:00:00]: +1 Store-p[2013-12-22 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-12-22 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-12-22 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-12-22 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-12-22 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-12-22 00:00:00, DZ.10_1_AC SMR] = -0.05260022626003252
+[2013-12-27 00:00:00]: +1 Store-p[2013-12-27 00:00:00, DZ.10_1_AC H2 Store Tank] - 1 Link-p[2013-12-27 00:00:00, DZ.10_1_AC H2 Fuel Cell] - 1 Link-p[2013-12-27 00:00:00, H2 pipeline DZ.10_1_AC -> DZ.28_1_AC repurposed] ... +0.6217 Link-p[2013-12-27 00:00:00, DZ.10_1_AC H2 Electrolysis] + 0.69 Link-p[2013-12-27 00:00:00, DZ.10_1_AC SMR CC] + 0.76 Link-p[2013-12-27 00:00:00, DZ.10_1_AC SMR] = -0.03963065871603438
+    • Constraint `Bus-nodal_balance` (snapshot: 73):
+----------------------------------------------
+[2013-01-01 00:00:00]: +1 Store-p[2013-01-01 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-01-01 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-01-06 00:00:00]: +1 Store-p[2013-01-06 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-01-06 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-01-11 00:00:00]: +1 Store-p[2013-01-11 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-01-11 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-01-16 00:00:00]: +1 Store-p[2013-01-16 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-01-16 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-01-16 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-01-21 00:00:00]: +1 Store-p[2013-01-21 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-01-21 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-01-21 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-01-26 00:00:00]: +1 Store-p[2013-01-26 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-01-26 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-01-26 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-01-31 00:00:00]: +1 Store-p[2013-01-31 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-01-31 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-01-31 00:00:00, DZ.10_1_AC battery charger] = -0.0
+		...
+[2013-11-27 00:00:00]: +1 Store-p[2013-11-27 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-11-27 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-11-27 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-12-02 00:00:00]: +1 Store-p[2013-12-02 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-12-02 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-12-02 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-12-07 00:00:00]: +1 Store-p[2013-12-07 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-12-07 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-12-07 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-12-12 00:00:00]: +1 Store-p[2013-12-12 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-12-12 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-12-12 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-12-17 00:00:00]: +1 Store-p[2013-12-17 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-12-17 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-12-17 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-12-22 00:00:00]: +1 Store-p[2013-12-22 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-12-22 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-12-22 00:00:00, DZ.10_1_AC battery charger] = -0.0
+[2013-12-27 00:00:00]: +1 Store-p[2013-12-27 00:00:00, DZ.10_1_AC battery] - 1 Link-p[2013-12-27 00:00:00, DZ.10_1_AC battery discharger] + 0.9798 Link-p[2013-12-27 00:00:00, DZ.10_1_AC battery charger] = -0.0
+
+- Bus-meshed-nodal_balance | shape = (124, 73)
+  ↳ No description available.
+    • Constraint `Bus-meshed-nodal_balance` (snapshot: 73):
+-----------------------------------------------------
+[2013-01-01 00:00:00]: +1 Store-p[2013-01-01 00:00:00, co2 atmosphere] - 1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-01-01 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-01-01 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-01 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-01 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-01-06 00:00:00]: +1 Store-p[2013-01-06 00:00:00, co2 atmosphere] - 1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-01-06 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-01-06 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-06 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-06 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-01-11 00:00:00]: +1 Store-p[2013-01-11 00:00:00, co2 atmosphere] - 1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-01-11 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-01-11 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-11 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-11 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-01-16 00:00:00]: +1 Store-p[2013-01-16 00:00:00, co2 atmosphere] - 1 Link-p[2013-01-16 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-01-16 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-01-16 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-16 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-16 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-01-21 00:00:00]: +1 Store-p[2013-01-21 00:00:00, co2 atmosphere] - 1 Link-p[2013-01-21 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-01-21 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-01-21 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-21 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-21 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-01-26 00:00:00]: +1 Store-p[2013-01-26 00:00:00, co2 atmosphere] - 1 Link-p[2013-01-26 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-01-26 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-01-26 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-26 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-26 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-01-31 00:00:00]: +1 Store-p[2013-01-31 00:00:00, co2 atmosphere] - 1 Link-p[2013-01-31 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-01-31 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-01-31 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-31 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-01-31 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+		...
+[2013-11-27 00:00:00]: +1 Store-p[2013-11-27 00:00:00, co2 atmosphere] - 1 Link-p[2013-11-27 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-11-27 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-11-27 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-11-27 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-11-27 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-12-02 00:00:00]: +1 Store-p[2013-12-02 00:00:00, co2 atmosphere] - 1 Link-p[2013-12-02 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-12-02 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-12-02 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-02 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-02 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-12-07 00:00:00]: +1 Store-p[2013-12-07 00:00:00, co2 atmosphere] - 1 Link-p[2013-12-07 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-12-07 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-12-07 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-07 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-07 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-12-12 00:00:00]: +1 Store-p[2013-12-12 00:00:00, co2 atmosphere] - 1 Link-p[2013-12-12 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-12-12 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-12-12 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-12 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-12 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-12-17 00:00:00]: +1 Store-p[2013-12-17 00:00:00, co2 atmosphere] - 1 Link-p[2013-12-17 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-12-17 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-12-17 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-17 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-17 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-12-22 00:00:00]: +1 Store-p[2013-12-22 00:00:00, co2 atmosphere] - 1 Link-p[2013-12-22 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-12-22 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-12-22 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-22 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-22 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+[2013-12-27 00:00:00]: +1 Store-p[2013-12-27 00:00:00, co2 atmosphere] - 1 Link-p[2013-12-27 00:00:00, DZ.10_1_AC services urban decentral DAC] - 1 Link-p[2013-12-27 00:00:00, DZ.11_1_AC services urban decentral DAC] ... -0.33 Link-p[2013-12-27 00:00:00, DZ.7_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-27 00:00:00, DZ.8_1_AC urban central solid biomass CHP CC] - 0.33 Link-p[2013-12-27 00:00:00, DZ.9_1_AC urban central solid biomass CHP CC] = -3245.0048138456095
+    • Constraint `Bus-meshed-nodal_balance` (snapshot: 73):
+-----------------------------------------------------
+[2013-01-01 00:00:00]: -1 Link-p[2013-01-01 00:00:00, process emissions] - 1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-01-01 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-01-01 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-01-01 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-01-01 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-01-06 00:00:00]: -1 Link-p[2013-01-06 00:00:00, process emissions] - 1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-01-06 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-01-06 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-01-06 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-01-06 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-01-11 00:00:00]: -1 Link-p[2013-01-11 00:00:00, process emissions] - 1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-01-11 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-01-11 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-01-11 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-01-11 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-01-16 00:00:00]: -1 Link-p[2013-01-16 00:00:00, process emissions] - 1 Link-p[2013-01-16 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-01-16 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-01-16 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-01-16 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-01-16 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-01-21 00:00:00]: -1 Link-p[2013-01-21 00:00:00, process emissions] - 1 Link-p[2013-01-21 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-01-21 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-01-21 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-01-21 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-01-21 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-01-26 00:00:00]: -1 Link-p[2013-01-26 00:00:00, process emissions] - 1 Link-p[2013-01-26 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-01-26 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-01-26 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-01-26 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-01-26 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-01-31 00:00:00]: -1 Link-p[2013-01-31 00:00:00, process emissions] - 1 Link-p[2013-01-31 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-01-31 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-01-31 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-01-31 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-01-31 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+		...
+[2013-11-27 00:00:00]: -1 Link-p[2013-11-27 00:00:00, process emissions] - 1 Link-p[2013-11-27 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-11-27 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-11-27 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-11-27 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-11-27 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-12-02 00:00:00]: -1 Link-p[2013-12-02 00:00:00, process emissions] - 1 Link-p[2013-12-02 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-12-02 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-12-02 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-12-02 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-12-02 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-12-07 00:00:00]: -1 Link-p[2013-12-07 00:00:00, process emissions] - 1 Link-p[2013-12-07 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-12-07 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-12-07 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-12-07 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-12-07 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-12-12 00:00:00]: -1 Link-p[2013-12-12 00:00:00, process emissions] - 1 Link-p[2013-12-12 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-12-12 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-12-12 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-12-12 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-12-12 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-12-17 00:00:00]: -1 Link-p[2013-12-17 00:00:00, process emissions] - 1 Link-p[2013-12-17 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-12-17 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-12-17 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-12-17 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-12-17 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-12-22 00:00:00]: -1 Link-p[2013-12-22 00:00:00, process emissions] - 1 Link-p[2013-12-22 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-12-22 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-12-22 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-12-22 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-12-22 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+[2013-12-27 00:00:00]: -1 Link-p[2013-12-27 00:00:00, process emissions] - 1 Link-p[2013-12-27 00:00:00, DZ.10_1_AC process emissions CC] - 1 Link-p[2013-12-27 00:00:00, DZ.11_1_AC process emissions CC] ... -1 Link-p[2013-12-27 00:00:00, DZ.7_1_AC process emissions CC] - 1 Link-p[2013-12-27 00:00:00, DZ.8_1_AC process emissions CC] - 1 Link-p[2013-12-27 00:00:00, DZ.9_1_AC process emissions CC] = -1348.6612716894979
+    • Constraint `Bus-meshed-nodal_balance` (snapshot: 73):
+-----------------------------------------------------
+[2013-01-01 00:00:00]: +1 Generator-p[2013-01-01 00:00:00, Earth lignite] + 1 Store-p[2013-01-01 00:00:00, Earth lignite Store] - 1 Link-p[2013-01-01 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-01-01 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-01-01 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-01-01 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-01-06 00:00:00]: +1 Generator-p[2013-01-06 00:00:00, Earth lignite] + 1 Store-p[2013-01-06 00:00:00, Earth lignite Store] - 1 Link-p[2013-01-06 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-01-06 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-01-06 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-01-06 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-01-11 00:00:00]: +1 Generator-p[2013-01-11 00:00:00, Earth lignite] + 1 Store-p[2013-01-11 00:00:00, Earth lignite Store] - 1 Link-p[2013-01-11 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-01-11 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-01-11 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-01-11 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-01-16 00:00:00]: +1 Generator-p[2013-01-16 00:00:00, Earth lignite] + 1 Store-p[2013-01-16 00:00:00, Earth lignite Store] - 1 Link-p[2013-01-16 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-01-16 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-01-16 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-01-16 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-01-21 00:00:00]: +1 Generator-p[2013-01-21 00:00:00, Earth lignite] + 1 Store-p[2013-01-21 00:00:00, Earth lignite Store] - 1 Link-p[2013-01-21 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-01-21 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-01-21 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-01-21 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-01-26 00:00:00]: +1 Generator-p[2013-01-26 00:00:00, Earth lignite] + 1 Store-p[2013-01-26 00:00:00, Earth lignite Store] - 1 Link-p[2013-01-26 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-01-26 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-01-26 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-01-26 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-01-31 00:00:00]: +1 Generator-p[2013-01-31 00:00:00, Earth lignite] + 1 Store-p[2013-01-31 00:00:00, Earth lignite Store] - 1 Link-p[2013-01-31 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-01-31 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-01-31 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-01-31 00:00:00, DZ.9_1_AC lignite] = -0.0
+		...
+[2013-11-27 00:00:00]: +1 Generator-p[2013-11-27 00:00:00, Earth lignite] + 1 Store-p[2013-11-27 00:00:00, Earth lignite Store] - 1 Link-p[2013-11-27 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-11-27 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-11-27 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-11-27 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-12-02 00:00:00]: +1 Generator-p[2013-12-02 00:00:00, Earth lignite] + 1 Store-p[2013-12-02 00:00:00, Earth lignite Store] - 1 Link-p[2013-12-02 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-12-02 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-12-02 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-12-02 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-12-07 00:00:00]: +1 Generator-p[2013-12-07 00:00:00, Earth lignite] + 1 Store-p[2013-12-07 00:00:00, Earth lignite Store] - 1 Link-p[2013-12-07 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-12-07 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-12-07 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-12-07 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-12-12 00:00:00]: +1 Generator-p[2013-12-12 00:00:00, Earth lignite] + 1 Store-p[2013-12-12 00:00:00, Earth lignite Store] - 1 Link-p[2013-12-12 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-12-12 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-12-12 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-12-12 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-12-17 00:00:00]: +1 Generator-p[2013-12-17 00:00:00, Earth lignite] + 1 Store-p[2013-12-17 00:00:00, Earth lignite Store] - 1 Link-p[2013-12-17 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-12-17 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-12-17 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-12-17 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-12-22 00:00:00]: +1 Generator-p[2013-12-22 00:00:00, Earth lignite] + 1 Store-p[2013-12-22 00:00:00, Earth lignite Store] - 1 Link-p[2013-12-22 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-12-22 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-12-22 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-12-22 00:00:00, DZ.9_1_AC lignite] = -0.0
+[2013-12-27 00:00:00]: +1 Generator-p[2013-12-27 00:00:00, Earth lignite] + 1 Store-p[2013-12-27 00:00:00, Earth lignite Store] - 1 Link-p[2013-12-27 00:00:00, DZ.10_1_AC lignite] ... -1 Link-p[2013-12-27 00:00:00, DZ.7_1_AC lignite] - 1 Link-p[2013-12-27 00:00:00, DZ.8_1_AC lignite] - 1 Link-p[2013-12-27 00:00:00, DZ.9_1_AC lignite] = -0.0
+
+- Kirchhoff-Voltage-Law | shape = (73, 52)
+  ↳ No description available.
+    • Constraint `Kirchhoff-Voltage-Law` (cycles: 52):
+------------------------------------------------
+[0]: +9.339 Line-s[2013-01-01 00:00:00, 52] - 20.6 Line-s[2013-01-01 00:00:00, 53] + 11.53 Line-s[2013-01-01 00:00:00, 96]                                                                                                                           = -0.0
+[1]: +102.8 Line-s[2013-01-01 00:00:00, 55] - 111.1 Line-s[2013-01-01 00:00:00, 56] + 11.53 Line-s[2013-01-01 00:00:00, 96]                                                                                                                          = -0.0
+[2]: +66.89 Line-s[2013-01-01 00:00:00, 54] - 102.8 Line-s[2013-01-01 00:00:00, 55] + 19.38 Line-s[2013-01-01 00:00:00, 86]                                                                                                                          = -0.0
+[3]: -27.29 Line-s[2013-01-01 00:00:00, 10] + 21.74 Line-s[2013-01-01 00:00:00, 11] - 30.73 Line-s[2013-01-01 00:00:00, 87]                                                                                                                          = -0.0
+[4]: -4.337 Line-s[2013-01-01 00:00:00, 69] + 56.76 Line-s[2013-01-01 00:00:00, 71] - 30.73 Line-s[2013-01-01 00:00:00, 87]                                                                                                                          = -0.0
+[5]: -21.74 Line-s[2013-01-01 00:00:00, 11] + 11.81 Line-s[2013-01-01 00:00:00, 13] + 6.79 Line-s[2013-01-01 00:00:00, 7] + 35.3 Line-s[2013-01-01 00:00:00, 95]                                                                                     = -0.0
+[6]: -24.4 Line-s[2013-01-01 00:00:00, 0] - 8.087 Line-s[2013-01-01 00:00:00, 14] + 5.222 Line-s[2013-01-01 00:00:00, 4]                                                                                                                             = -0.0
+		...
+[45]: -25.8 Line-s[2013-01-01 00:00:00, 20] + 38.14 Line-s[2013-01-01 00:00:00, 22] - 11.67 Line-s[2013-01-01 00:00:00, 70]                                                                                                                          = -0.0
+[46]: -45.21 Line-s[2013-01-01 00:00:00, 21] + 38.14 Line-s[2013-01-01 00:00:00, 22] - 57.81 Line-s[2013-01-01 00:00:00, 48] ... -25 Line-s[2013-01-01 00:00:00, 82] + 19.38 Line-s[2013-01-01 00:00:00, 86] - 30.73 Line-s[2013-01-01 00:00:00, 87] = -0.0
+[47]: -11.82 Line-s[2013-01-01 00:00:00, 68] + 4.337 Line-s[2013-01-01 00:00:00, 69] - 25 Line-s[2013-01-01 00:00:00, 82] + 19.38 Line-s[2013-01-01 00:00:00, 86]                                                                                    = -0.0
+[48]: -18.28 Line-s[2013-01-01 00:00:00, 5] - 66.89 Line-s[2013-01-01 00:00:00, 54] + 15.18 Line-s[2013-01-01 00:00:00, 6]                                                                                                                           = -0.0
+[49]: +9.492 Line-s[2013-01-01 00:00:00, 50] - 9.339 Line-s[2013-01-01 00:00:00, 52] + 25 Line-s[2013-01-01 00:00:00, 82]                                                                                                                            = -0.0
+[50]: +17.59 Line-s[2013-01-01 00:00:00, 33] - 35.85 Line-s[2013-01-01 00:00:00, 34] + 77.77 Line-s[2013-01-01 00:00:00, 80]                                                                                                                         = -0.0
+[51]: +66.17 Line-s[2013-01-01 00:00:00, 32] - 35.85 Line-s[2013-01-01 00:00:00, 34] + 20.6 Line-s[2013-01-01 00:00:00, 53]                                                                                                                          = -0.0
+    • Constraint `Kirchhoff-Voltage-Law` (cycles: 52):
+------------------------------------------------
+[0]: +9.339 Line-s[2013-01-06 00:00:00, 52] - 20.6 Line-s[2013-01-06 00:00:00, 53] + 11.53 Line-s[2013-01-06 00:00:00, 96]                                                                                                                           = -0.0
+[1]: +102.8 Line-s[2013-01-06 00:00:00, 55] - 111.1 Line-s[2013-01-06 00:00:00, 56] + 11.53 Line-s[2013-01-06 00:00:00, 96]                                                                                                                          = -0.0
+[2]: +66.89 Line-s[2013-01-06 00:00:00, 54] - 102.8 Line-s[2013-01-06 00:00:00, 55] + 19.38 Line-s[2013-01-06 00:00:00, 86]                                                                                                                          = -0.0
+[3]: -27.29 Line-s[2013-01-06 00:00:00, 10] + 21.74 Line-s[2013-01-06 00:00:00, 11] - 30.73 Line-s[2013-01-06 00:00:00, 87]                                                                                                                          = -0.0
+[4]: -4.337 Line-s[2013-01-06 00:00:00, 69] + 56.76 Line-s[2013-01-06 00:00:00, 71] - 30.73 Line-s[2013-01-06 00:00:00, 87]                                                                                                                          = -0.0
+[5]: -21.74 Line-s[2013-01-06 00:00:00, 11] + 11.81 Line-s[2013-01-06 00:00:00, 13] + 6.79 Line-s[2013-01-06 00:00:00, 7] + 35.3 Line-s[2013-01-06 00:00:00, 95]                                                                                     = -0.0
+[6]: -24.4 Line-s[2013-01-06 00:00:00, 0] - 8.087 Line-s[2013-01-06 00:00:00, 14] + 5.222 Line-s[2013-01-06 00:00:00, 4]                                                                                                                             = -0.0
+		...
+[45]: -25.8 Line-s[2013-01-06 00:00:00, 20] + 38.14 Line-s[2013-01-06 00:00:00, 22] - 11.67 Line-s[2013-01-06 00:00:00, 70]                                                                                                                          = -0.0
+[46]: -45.21 Line-s[2013-01-06 00:00:00, 21] + 38.14 Line-s[2013-01-06 00:00:00, 22] - 57.81 Line-s[2013-01-06 00:00:00, 48] ... -25 Line-s[2013-01-06 00:00:00, 82] + 19.38 Line-s[2013-01-06 00:00:00, 86] - 30.73 Line-s[2013-01-06 00:00:00, 87] = -0.0
+[47]: -11.82 Line-s[2013-01-06 00:00:00, 68] + 4.337 Line-s[2013-01-06 00:00:00, 69] - 25 Line-s[2013-01-06 00:00:00, 82] + 19.38 Line-s[2013-01-06 00:00:00, 86]                                                                                    = -0.0
+[48]: -18.28 Line-s[2013-01-06 00:00:00, 5] - 66.89 Line-s[2013-01-06 00:00:00, 54] + 15.18 Line-s[2013-01-06 00:00:00, 6]                                                                                                                           = -0.0
+[49]: +9.492 Line-s[2013-01-06 00:00:00, 50] - 9.339 Line-s[2013-01-06 00:00:00, 52] + 25 Line-s[2013-01-06 00:00:00, 82]                                                                                                                            = -0.0
+[50]: +17.59 Line-s[2013-01-06 00:00:00, 33] - 35.85 Line-s[2013-01-06 00:00:00, 34] + 77.77 Line-s[2013-01-06 00:00:00, 80]                                                                                                                         = -0.0
+[51]: +66.17 Line-s[2013-01-06 00:00:00, 32] - 35.85 Line-s[2013-01-06 00:00:00, 34] + 20.6 Line-s[2013-01-06 00:00:00, 53]                                                                                                                          = -0.0
+    • Constraint `Kirchhoff-Voltage-Law` (cycles: 52):
+------------------------------------------------
+[0]: +9.339 Line-s[2013-01-11 00:00:00, 52] - 20.6 Line-s[2013-01-11 00:00:00, 53] + 11.53 Line-s[2013-01-11 00:00:00, 96]                                                                                                                           = -0.0
+[1]: +102.8 Line-s[2013-01-11 00:00:00, 55] - 111.1 Line-s[2013-01-11 00:00:00, 56] + 11.53 Line-s[2013-01-11 00:00:00, 96]                                                                                                                          = -0.0
+[2]: +66.89 Line-s[2013-01-11 00:00:00, 54] - 102.8 Line-s[2013-01-11 00:00:00, 55] + 19.38 Line-s[2013-01-11 00:00:00, 86]                                                                                                                          = -0.0
+[3]: -27.29 Line-s[2013-01-11 00:00:00, 10] + 21.74 Line-s[2013-01-11 00:00:00, 11] - 30.73 Line-s[2013-01-11 00:00:00, 87]                                                                                                                          = -0.0
+[4]: -4.337 Line-s[2013-01-11 00:00:00, 69] + 56.76 Line-s[2013-01-11 00:00:00, 71] - 30.73 Line-s[2013-01-11 00:00:00, 87]                                                                                                                          = -0.0
+[5]: -21.74 Line-s[2013-01-11 00:00:00, 11] + 11.81 Line-s[2013-01-11 00:00:00, 13] + 6.79 Line-s[2013-01-11 00:00:00, 7] + 35.3 Line-s[2013-01-11 00:00:00, 95]                                                                                     = -0.0
+[6]: -24.4 Line-s[2013-01-11 00:00:00, 0] - 8.087 Line-s[2013-01-11 00:00:00, 14] + 5.222 Line-s[2013-01-11 00:00:00, 4]                                                                                                                             = -0.0
+		...
+[45]: -25.8 Line-s[2013-01-11 00:00:00, 20] + 38.14 Line-s[2013-01-11 00:00:00, 22] - 11.67 Line-s[2013-01-11 00:00:00, 70]                                                                                                                          = -0.0
+[46]: -45.21 Line-s[2013-01-11 00:00:00, 21] + 38.14 Line-s[2013-01-11 00:00:00, 22] - 57.81 Line-s[2013-01-11 00:00:00, 48] ... -25 Line-s[2013-01-11 00:00:00, 82] + 19.38 Line-s[2013-01-11 00:00:00, 86] - 30.73 Line-s[2013-01-11 00:00:00, 87] = -0.0
+[47]: -11.82 Line-s[2013-01-11 00:00:00, 68] + 4.337 Line-s[2013-01-11 00:00:00, 69] - 25 Line-s[2013-01-11 00:00:00, 82] + 19.38 Line-s[2013-01-11 00:00:00, 86]                                                                                    = -0.0
+[48]: -18.28 Line-s[2013-01-11 00:00:00, 5] - 66.89 Line-s[2013-01-11 00:00:00, 54] + 15.18 Line-s[2013-01-11 00:00:00, 6]                                                                                                                           = -0.0
+[49]: +9.492 Line-s[2013-01-11 00:00:00, 50] - 9.339 Line-s[2013-01-11 00:00:00, 52] + 25 Line-s[2013-01-11 00:00:00, 82]                                                                                                                            = -0.0
+[50]: +17.59 Line-s[2013-01-11 00:00:00, 33] - 35.85 Line-s[2013-01-11 00:00:00, 34] + 77.77 Line-s[2013-01-11 00:00:00, 80]                                                                                                                         = -0.0
+[51]: +66.17 Line-s[2013-01-11 00:00:00, 32] - 35.85 Line-s[2013-01-11 00:00:00, 34] + 20.6 Line-s[2013-01-11 00:00:00, 53]                                                                                                                          = -0.0
+
+- StorageUnit-energy_balance | shape = (73, 1)
+  ↳ No description available.
+    • Constraint `StorageUnit-energy_balance` (StorageUnit: 1):
+---------------------------------------------------------
+[DZ.8_1_AC hydro]: -1 StorageUnit-state_of_charge[2013-01-01 00:00:00, DZ.8_1_AC hydro] - 133.3 StorageUnit-p_dispatch[2013-01-01 00:00:00, DZ.8_1_AC hydro] - 120 StorageUnit-spill[2013-01-01 00:00:00, DZ.8_1_AC hydro] + 1 StorageUnit-state_of_charge[2013-12-27 00:00:00, DZ.8_1_AC hydro] = -1635.5084148789124
+    • Constraint `StorageUnit-energy_balance` (StorageUnit: 1):
+---------------------------------------------------------
+[DZ.8_1_AC hydro]: -1 StorageUnit-state_of_charge[2013-01-06 00:00:00, DZ.8_1_AC hydro] - 133.3 StorageUnit-p_dispatch[2013-01-06 00:00:00, DZ.8_1_AC hydro] - 120 StorageUnit-spill[2013-01-06 00:00:00, DZ.8_1_AC hydro] + 1 StorageUnit-state_of_charge[2013-01-01 00:00:00, DZ.8_1_AC hydro] = -293.57578940762454
+    • Constraint `StorageUnit-energy_balance` (StorageUnit: 1):
+---------------------------------------------------------
+[DZ.8_1_AC hydro]: -1 StorageUnit-state_of_charge[2013-01-11 00:00:00, DZ.8_1_AC hydro] - 133.3 StorageUnit-p_dispatch[2013-01-11 00:00:00, DZ.8_1_AC hydro] - 120 StorageUnit-spill[2013-01-11 00:00:00, DZ.8_1_AC hydro] + 1 StorageUnit-state_of_charge[2013-01-06 00:00:00, DZ.8_1_AC hydro] = -1537.3044715496546
+
+- Store-energy_balance | shape = (73, 755)
+  ↳ No description available.
+    • Constraint `Store-energy_balance` (Store: 755):
+-----------------------------------------------
+[co2 atmosphere]: -1 Store-e[2013-01-01 00:00:00, co2 atmosphere] - 120 Store-p[2013-01-01 00:00:00, co2 atmosphere]                                                                                  = -0.0
+[DZ.10_1_AC co2 stored]: -1 Store-e[2013-01-01 00:00:00, DZ.10_1_AC co2 stored] - 120 Store-p[2013-01-01 00:00:00, DZ.10_1_AC co2 stored]                                                             = -0.0
+[DZ.11_1_AC co2 stored]: -1 Store-e[2013-01-01 00:00:00, DZ.11_1_AC co2 stored] - 120 Store-p[2013-01-01 00:00:00, DZ.11_1_AC co2 stored]                                                             = -0.0
+[DZ.12_1_AC co2 stored]: -1 Store-e[2013-01-01 00:00:00, DZ.12_1_AC co2 stored] - 120 Store-p[2013-01-01 00:00:00, DZ.12_1_AC co2 stored]                                                             = -0.0
+[DZ.13_1_AC co2 stored]: -1 Store-e[2013-01-01 00:00:00, DZ.13_1_AC co2 stored] - 120 Store-p[2013-01-01 00:00:00, DZ.13_1_AC co2 stored]                                                             = -0.0
+[DZ.14_1_AC co2 stored]: -1 Store-e[2013-01-01 00:00:00, DZ.14_1_AC co2 stored] - 120 Store-p[2013-01-01 00:00:00, DZ.14_1_AC co2 stored]                                                             = -0.0
+[DZ.15_1_AC co2 stored]: -1 Store-e[2013-01-01 00:00:00, DZ.15_1_AC co2 stored] - 120 Store-p[2013-01-01 00:00:00, DZ.15_1_AC co2 stored]                                                             = -0.0
+		...
+[DZ.4_1_AC home battery]: -1 Store-e[2013-01-01 00:00:00, DZ.4_1_AC home battery] - 120 Store-p[2013-01-01 00:00:00, DZ.4_1_AC home battery] + 1 Store-e[2013-12-27 00:00:00, DZ.4_1_AC home battery] = -0.0
+[DZ.5_1_AC home battery]: -1 Store-e[2013-01-01 00:00:00, DZ.5_1_AC home battery] - 120 Store-p[2013-01-01 00:00:00, DZ.5_1_AC home battery] + 1 Store-e[2013-12-27 00:00:00, DZ.5_1_AC home battery] = -0.0
+[DZ.6_1_AC home battery]: -1 Store-e[2013-01-01 00:00:00, DZ.6_1_AC home battery] - 120 Store-p[2013-01-01 00:00:00, DZ.6_1_AC home battery] + 1 Store-e[2013-12-27 00:00:00, DZ.6_1_AC home battery] = -0.0
+[DZ.7_1_AC home battery]: -1 Store-e[2013-01-01 00:00:00, DZ.7_1_AC home battery] - 120 Store-p[2013-01-01 00:00:00, DZ.7_1_AC home battery] + 1 Store-e[2013-12-27 00:00:00, DZ.7_1_AC home battery] = -0.0
+[DZ.8_1_AC home battery]: -1 Store-e[2013-01-01 00:00:00, DZ.8_1_AC home battery] - 120 Store-p[2013-01-01 00:00:00, DZ.8_1_AC home battery] + 1 Store-e[2013-12-27 00:00:00, DZ.8_1_AC home battery] = -0.0
+[DZ.9_1_AC home battery]: -1 Store-e[2013-01-01 00:00:00, DZ.9_1_AC home battery] - 120 Store-p[2013-01-01 00:00:00, DZ.9_1_AC home battery] + 1 Store-e[2013-12-27 00:00:00, DZ.9_1_AC home battery] = -0.0
+[H2 export store]: -1 Store-e[2013-01-01 00:00:00, H2 export store] - 120 Store-p[2013-01-01 00:00:00, H2 export store] + 1 Store-e[2013-12-27 00:00:00, H2 export store]                             = -0.0
+    • Constraint `Store-energy_balance` (Store: 755):
+-----------------------------------------------
+[co2 atmosphere]: -1 Store-e[2013-01-06 00:00:00, co2 atmosphere] - 120 Store-p[2013-01-06 00:00:00, co2 atmosphere] + 1 Store-e[2013-01-01 00:00:00, co2 atmosphere]                                 = -0.0
+[DZ.10_1_AC co2 stored]: -1 Store-e[2013-01-06 00:00:00, DZ.10_1_AC co2 stored] - 120 Store-p[2013-01-06 00:00:00, DZ.10_1_AC co2 stored] + 1 Store-e[2013-01-01 00:00:00, DZ.10_1_AC co2 stored]     = -0.0
+[DZ.11_1_AC co2 stored]: -1 Store-e[2013-01-06 00:00:00, DZ.11_1_AC co2 stored] - 120 Store-p[2013-01-06 00:00:00, DZ.11_1_AC co2 stored] + 1 Store-e[2013-01-01 00:00:00, DZ.11_1_AC co2 stored]     = -0.0
+[DZ.12_1_AC co2 stored]: -1 Store-e[2013-01-06 00:00:00, DZ.12_1_AC co2 stored] - 120 Store-p[2013-01-06 00:00:00, DZ.12_1_AC co2 stored] + 1 Store-e[2013-01-01 00:00:00, DZ.12_1_AC co2 stored]     = -0.0
+[DZ.13_1_AC co2 stored]: -1 Store-e[2013-01-06 00:00:00, DZ.13_1_AC co2 stored] - 120 Store-p[2013-01-06 00:00:00, DZ.13_1_AC co2 stored] + 1 Store-e[2013-01-01 00:00:00, DZ.13_1_AC co2 stored]     = -0.0
+[DZ.14_1_AC co2 stored]: -1 Store-e[2013-01-06 00:00:00, DZ.14_1_AC co2 stored] - 120 Store-p[2013-01-06 00:00:00, DZ.14_1_AC co2 stored] + 1 Store-e[2013-01-01 00:00:00, DZ.14_1_AC co2 stored]     = -0.0
+[DZ.15_1_AC co2 stored]: -1 Store-e[2013-01-06 00:00:00, DZ.15_1_AC co2 stored] - 120 Store-p[2013-01-06 00:00:00, DZ.15_1_AC co2 stored] + 1 Store-e[2013-01-01 00:00:00, DZ.15_1_AC co2 stored]     = -0.0
+		...
+[DZ.4_1_AC home battery]: -1 Store-e[2013-01-06 00:00:00, DZ.4_1_AC home battery] - 120 Store-p[2013-01-06 00:00:00, DZ.4_1_AC home battery] + 1 Store-e[2013-01-01 00:00:00, DZ.4_1_AC home battery] = -0.0
+[DZ.5_1_AC home battery]: -1 Store-e[2013-01-06 00:00:00, DZ.5_1_AC home battery] - 120 Store-p[2013-01-06 00:00:00, DZ.5_1_AC home battery] + 1 Store-e[2013-01-01 00:00:00, DZ.5_1_AC home battery] = -0.0
+[DZ.6_1_AC home battery]: -1 Store-e[2013-01-06 00:00:00, DZ.6_1_AC home battery] - 120 Store-p[2013-01-06 00:00:00, DZ.6_1_AC home battery] + 1 Store-e[2013-01-01 00:00:00, DZ.6_1_AC home battery] = -0.0
+[DZ.7_1_AC home battery]: -1 Store-e[2013-01-06 00:00:00, DZ.7_1_AC home battery] - 120 Store-p[2013-01-06 00:00:00, DZ.7_1_AC home battery] + 1 Store-e[2013-01-01 00:00:00, DZ.7_1_AC home battery] = -0.0
+[DZ.8_1_AC home battery]: -1 Store-e[2013-01-06 00:00:00, DZ.8_1_AC home battery] - 120 Store-p[2013-01-06 00:00:00, DZ.8_1_AC home battery] + 1 Store-e[2013-01-01 00:00:00, DZ.8_1_AC home battery] = -0.0
+[DZ.9_1_AC home battery]: -1 Store-e[2013-01-06 00:00:00, DZ.9_1_AC home battery] - 120 Store-p[2013-01-06 00:00:00, DZ.9_1_AC home battery] + 1 Store-e[2013-01-01 00:00:00, DZ.9_1_AC home battery] = -0.0
+[H2 export store]: -1 Store-e[2013-01-06 00:00:00, H2 export store] - 120 Store-p[2013-01-06 00:00:00, H2 export store] + 1 Store-e[2013-01-01 00:00:00, H2 export store]                             = -0.0
+    • Constraint `Store-energy_balance` (Store: 755):
+-----------------------------------------------
+[co2 atmosphere]: -1 Store-e[2013-01-11 00:00:00, co2 atmosphere] - 120 Store-p[2013-01-11 00:00:00, co2 atmosphere] + 1 Store-e[2013-01-06 00:00:00, co2 atmosphere]                                 = -0.0
+[DZ.10_1_AC co2 stored]: -1 Store-e[2013-01-11 00:00:00, DZ.10_1_AC co2 stored] - 120 Store-p[2013-01-11 00:00:00, DZ.10_1_AC co2 stored] + 1 Store-e[2013-01-06 00:00:00, DZ.10_1_AC co2 stored]     = -0.0
+[DZ.11_1_AC co2 stored]: -1 Store-e[2013-01-11 00:00:00, DZ.11_1_AC co2 stored] - 120 Store-p[2013-01-11 00:00:00, DZ.11_1_AC co2 stored] + 1 Store-e[2013-01-06 00:00:00, DZ.11_1_AC co2 stored]     = -0.0
+[DZ.12_1_AC co2 stored]: -1 Store-e[2013-01-11 00:00:00, DZ.12_1_AC co2 stored] - 120 Store-p[2013-01-11 00:00:00, DZ.12_1_AC co2 stored] + 1 Store-e[2013-01-06 00:00:00, DZ.12_1_AC co2 stored]     = -0.0
+[DZ.13_1_AC co2 stored]: -1 Store-e[2013-01-11 00:00:00, DZ.13_1_AC co2 stored] - 120 Store-p[2013-01-11 00:00:00, DZ.13_1_AC co2 stored] + 1 Store-e[2013-01-06 00:00:00, DZ.13_1_AC co2 stored]     = -0.0
+[DZ.14_1_AC co2 stored]: -1 Store-e[2013-01-11 00:00:00, DZ.14_1_AC co2 stored] - 120 Store-p[2013-01-11 00:00:00, DZ.14_1_AC co2 stored] + 1 Store-e[2013-01-06 00:00:00, DZ.14_1_AC co2 stored]     = -0.0
+[DZ.15_1_AC co2 stored]: -1 Store-e[2013-01-11 00:00:00, DZ.15_1_AC co2 stored] - 120 Store-p[2013-01-11 00:00:00, DZ.15_1_AC co2 stored] + 1 Store-e[2013-01-06 00:00:00, DZ.15_1_AC co2 stored]     = -0.0
+		...
+[DZ.4_1_AC home battery]: -1 Store-e[2013-01-11 00:00:00, DZ.4_1_AC home battery] - 120 Store-p[2013-01-11 00:00:00, DZ.4_1_AC home battery] + 1 Store-e[2013-01-06 00:00:00, DZ.4_1_AC home battery] = -0.0
+[DZ.5_1_AC home battery]: -1 Store-e[2013-01-11 00:00:00, DZ.5_1_AC home battery] - 120 Store-p[2013-01-11 00:00:00, DZ.5_1_AC home battery] + 1 Store-e[2013-01-06 00:00:00, DZ.5_1_AC home battery] = -0.0
+[DZ.6_1_AC home battery]: -1 Store-e[2013-01-11 00:00:00, DZ.6_1_AC home battery] - 120 Store-p[2013-01-11 00:00:00, DZ.6_1_AC home battery] + 1 Store-e[2013-01-06 00:00:00, DZ.6_1_AC home battery] = -0.0
+[DZ.7_1_AC home battery]: -1 Store-e[2013-01-11 00:00:00, DZ.7_1_AC home battery] - 120 Store-p[2013-01-11 00:00:00, DZ.7_1_AC home battery] + 1 Store-e[2013-01-06 00:00:00, DZ.7_1_AC home battery] = -0.0
+[DZ.8_1_AC home battery]: -1 Store-e[2013-01-11 00:00:00, DZ.8_1_AC home battery] - 120 Store-p[2013-01-11 00:00:00, DZ.8_1_AC home battery] + 1 Store-e[2013-01-06 00:00:00, DZ.8_1_AC home battery] = -0.0
+[DZ.9_1_AC home battery]: -1 Store-e[2013-01-11 00:00:00, DZ.9_1_AC home battery] - 120 Store-p[2013-01-11 00:00:00, DZ.9_1_AC home battery] + 1 Store-e[2013-01-06 00:00:00, DZ.9_1_AC home battery] = -0.0
+[H2 export store]: -1 Store-e[2013-01-11 00:00:00, H2 export store] - 120 Store-p[2013-01-11 00:00:00, H2 export store] + 1 Store-e[2013-01-06 00:00:00, H2 export store]                             = -0.0
+
+- GlobalConstraint-CO2Limit | shape = ()
+  ↳ No description available.
+    • [Could not extract sample expressions]
+
+
+=== VARIABLES ===
+- Generator-p_nom
+  ↳ lower bound: <xarray.DataArray 'lower' (Generator-ext: 3)>
+array([-inf, -inf, -inf])
+Coordinates:
+  * Generator-ext  (Generator-ext) object 'DZ.10_1_AC onwind' ... 'DZ.11_1_AC...
+  ↳ upper bound: <xarray.DataArray 'upper' (Generator-ext: 3)>
+array([inf, inf, inf])
+Coordinates:
+  * Generator-ext  (Generator-ext) object 'DZ.10_1_AC onwind' ... 'DZ.11_1_AC...
+
+- Line-s_nom
+  ↳ lower bound: <xarray.DataArray 'lower' (Line-ext: 3)>
+array([-inf, -inf, -inf])
+Coordinates:
+  * Line-ext  (Line-ext) object '0' '1' '10'
+  ↳ upper bound: <xarray.DataArray 'upper' (Line-ext: 3)>
+array([inf, inf, inf])
+Coordinates:
+  * Line-ext  (Line-ext) object '0' '1' '10'
+
+- Link-p_nom
+  ↳ lower bound: <xarray.DataArray 'lower' (Link-ext: 3)>
+array([-inf, -inf, -inf])
+Coordinates:
+  * Link-ext  (Link-ext) object 'DZ.10_1_AC co2 vent' ... 'DZ.12_1_AC co2 vent'
+  ↳ upper bound: <xarray.DataArray 'upper' (Link-ext: 3)>
+array([inf, inf, inf])
+Coordinates:
+  * Link-ext  (Link-ext) object 'DZ.10_1_AC co2 vent' ... 'DZ.12_1_AC co2 vent'
+
+- Store-e_nom
+  ↳ lower bound: <xarray.DataArray 'lower' (Store-ext: 3)>
+array([-inf, -inf, -inf])
+Coordinates:
+  * Store-ext  (Store-ext) object 'co2 atmosphere' ... 'DZ.11_1_AC co2 stored'
+  ↳ upper bound: <xarray.DataArray 'upper' (Store-ext: 3)>
+array([inf, inf, inf])
+Coordinates:
+  * Store-ext  (Store-ext) object 'co2 atmosphere' ... 'DZ.11_1_AC co2 stored'
+
+- Generator-p
+  ↳ lower bound: <xarray.DataArray 'lower' (snapshot: 3, Generator: 619)>
+array([[-inf, -inf, -inf, ..., -inf, -inf, -inf],
+       [-inf, -inf, -inf, ..., -inf, -inf, -inf],
+       [-inf, -inf, -inf, ..., -inf, -inf, -inf]])
+Coordinates:
+  * snapshot   (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Generator  (Generator) object 'DZ.10_1_AC CCGT' ... 'DZ.9_1_AC solar roof...
+  ↳ upper bound: <xarray.DataArray 'upper' (snapshot: 3, Generator: 619)>
+array([[inf, inf, inf, ..., inf, inf, inf],
+       [inf, inf, inf, ..., inf, inf, inf],
+       [inf, inf, inf, ..., inf, inf, inf]])
+Coordinates:
+  * snapshot   (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Generator  (Generator) object 'DZ.10_1_AC CCGT' ... 'DZ.9_1_AC solar roof...
+
+- Line-s
+  ↳ lower bound: <xarray.DataArray 'lower' (snapshot: 3, Line: 97)>
+array([[-inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf],
+       [-inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf],
+       [-inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf,
+        -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf, -inf]])
+Coordinates:
+  * snapshot  (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Line      (Line) object '0' '1' '10' '11' '12' ... '92' '93' '94' '95' '96'
+  ↳ upper bound: <xarray.DataArray 'upper' (snapshot: 3, Line: 97)>
+array([[inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf],
+       [inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf],
+       [inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf, inf,
+        inf, inf, inf, inf, inf, inf]])
+Coordinates:
+  * snapshot  (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Line      (Line) object '0' '1' '10' '11' '12' ... '92' '93' '94' '95' '96'
+
+- Link-p
+  ↳ lower bound: <xarray.DataArray 'lower' (snapshot: 3, Link: 3118)>
+array([[-inf, -inf, -inf, ..., -inf, -inf, -inf],
+       [-inf, -inf, -inf, ..., -inf, -inf, -inf],
+       [-inf, -inf, -inf, ..., -inf, -inf, -inf]])
+Coordinates:
+  * snapshot  (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Link      (Link) object 'DZ.10_1_AC co2 vent' ... 'DZ.32_1_AC H2 export'
+  ↳ upper bound: <xarray.DataArray 'upper' (snapshot: 3, Link: 3118)>
+array([[inf, inf, inf, ..., inf, inf, inf],
+       [inf, inf, inf, ..., inf, inf, inf],
+       [inf, inf, inf, ..., inf, inf, inf]])
+Coordinates:
+  * snapshot  (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Link      (Link) object 'DZ.10_1_AC co2 vent' ... 'DZ.32_1_AC H2 export'
+
+- Store-e
+  ↳ lower bound: <xarray.DataArray 'lower' (snapshot: 3, Store: 755)>
+array([[-inf, -inf, -inf, ..., -inf, -inf, -inf],
+       [-inf, -inf, -inf, ..., -inf, -inf, -inf],
+       [-inf, -inf, -inf, ..., -inf, -inf, -inf]])
+Coordinates:
+  * snapshot  (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Store     (Store) object 'co2 atmosphere' ... 'H2 export store'
+  ↳ upper bound: <xarray.DataArray 'upper' (snapshot: 3, Store: 755)>
+array([[inf, inf, inf, ..., inf, inf, inf],
+       [inf, inf, inf, ..., inf, inf, inf],
+       [inf, inf, inf, ..., inf, inf, inf]])
+Coordinates:
+  * snapshot  (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Store     (Store) object 'co2 atmosphere' ... 'H2 export store'
+
+- StorageUnit-p_dispatch
+  ↳ lower bound: <xarray.DataArray 'lower' (snapshot: 3, StorageUnit: 1)>
+array([[-inf],
+       [-inf],
+       [-inf]])
+Coordinates:
+  * snapshot     (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * StorageUnit  (StorageUnit) object 'DZ.8_1_AC hydro'
+  ↳ upper bound: <xarray.DataArray 'upper' (snapshot: 3, StorageUnit: 1)>
+array([[inf],
+       [inf],
+       [inf]])
+Coordinates:
+  * snapshot     (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * StorageUnit  (StorageUnit) object 'DZ.8_1_AC hydro'
+
+- StorageUnit-p_store
+  ↳ lower bound: <xarray.DataArray 'lower' (snapshot: 3, StorageUnit: 1)>
+array([[-inf],
+       [-inf],
+       [-inf]])
+Coordinates:
+  * snapshot     (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * StorageUnit  (StorageUnit) object 'DZ.8_1_AC hydro'
+  ↳ upper bound: <xarray.DataArray 'upper' (snapshot: 3, StorageUnit: 1)>
+array([[inf],
+       [inf],
+       [inf]])
+Coordinates:
+  * snapshot     (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * StorageUnit  (StorageUnit) object 'DZ.8_1_AC hydro'
+
+- StorageUnit-state_of_charge
+  ↳ lower bound: <xarray.DataArray 'lower' (snapshot: 3, StorageUnit: 1)>
+array([[-inf],
+       [-inf],
+       [-inf]])
+Coordinates:
+  * snapshot     (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * StorageUnit  (StorageUnit) object 'DZ.8_1_AC hydro'
+  ↳ upper bound: <xarray.DataArray 'upper' (snapshot: 3, StorageUnit: 1)>
+array([[inf],
+       [inf],
+       [inf]])
+Coordinates:
+  * snapshot     (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * StorageUnit  (StorageUnit) object 'DZ.8_1_AC hydro'
+
+- StorageUnit-spill
+  ↳ lower bound: <xarray.DataArray 'lower' (snapshot: 3, StorageUnit: 1)>
+array([[0.],
+       [0.],
+       [0.]])
+Coordinates:
+  * snapshot     (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * StorageUnit  (StorageUnit) object 'DZ.8_1_AC hydro'
+  ↳ upper bound: <xarray.DataArray 'upper' (snapshot: 3, StorageUnit: 1)>
+array([[13.62923679],
+       [ 2.44646491],
+       [12.8108706 ]])
+Coordinates:
+  * snapshot     (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * StorageUnit  (StorageUnit) object 'DZ.8_1_AC hydro'
+
+- Store-p
+  ↳ lower bound: <xarray.DataArray 'lower' (snapshot: 3, Store: 755)>
+array([[-inf, -inf, -inf, ..., -inf, -inf, -inf],
+       [-inf, -inf, -inf, ..., -inf, -inf, -inf],
+       [-inf, -inf, -inf, ..., -inf, -inf, -inf]])
+Coordinates:
+  * snapshot  (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Store     (Store) object 'co2 atmosphere' ... 'H2 export store'
+  ↳ upper bound: <xarray.DataArray 'upper' (snapshot: 3, Store: 755)>
+array([[inf, inf, inf, ..., inf, inf, inf],
+       [inf, inf, inf, ..., inf, inf, inf],
+       [inf, inf, inf, ..., inf, inf, inf]])
+Coordinates:
+  * snapshot  (snapshot) datetime64[ns] 2013-01-01 2013-01-06 2013-01-11
+  * Store     (Store) object 'co2 atmosphere' ... 'H2 export store'
+
+- objective_constant
+  ↳ [Bounds not available]
+
