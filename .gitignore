@@ -39,6 +39,7 @@ benchmarks/
 backup*
 cutouts/
 data/
+!data/custom_demand.csv # track custom_demand for add_custom_demand rule
 dask-worker-space/
 img/
 logs/
