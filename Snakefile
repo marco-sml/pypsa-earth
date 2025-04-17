@@ -539,7 +539,8 @@ rule add_electricity:
         #Link: https://drive.google.com/drive/u/1/folders/1dkW1wKBWvSY4i-XEuQFFBj242p0VdUlM
         gadm_shapes="resources/" + RDIR + "shapes/gadm_shapes.geojson",
         hydro_capacities="data/hydro_capacities.csv",
-        demand_profiles="resources/" + RDIR + "demand_profiles.csv",
+        #demand_profiles="resources/" + RDIR + "demand_profiles.csv",
+        demand_profiles="resources/" + RDIR + "demand_profiles_custom.csv" # customized demand profile file
     output:
         "networks/" + RDIR + "elec.nc",
     log:
@@ -2190,3 +2191,24 @@ rule run_all_scenarios:
                 for c in Path("configs/scenarios").glob("config.*.yaml")
             ],
         ),
+
+
+rule add_custom_demand:
+    params:
+        countries=config["countries"],  # Optional, if needed later
+    input:
+        base_demand="resources/" + RDIR + "demand_profiles.csv",
+        bus_regions="resources/" + RDIR + "bus_regions/regions_onshore.geojson",
+        additional_demand="data/custom_demand.csv"
+    output:
+        profiles="resources/" + RDIR + "demand_profiles_custom.csv",
+        mapping="resources/" + RDIR + "demand_mapping_custom.csv"
+    log:
+        "logs/" + RDIR + "add_custom_demand.log"
+    benchmark:
+        "benchmarks/" + RDIR + "add_custom_demand"
+    threads: 1
+    resources:
+        mem_mb=1000
+    script:
+        "scripts/add_custom_demand.py"
