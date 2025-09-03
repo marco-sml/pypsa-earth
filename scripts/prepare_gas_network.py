@@ -41,7 +41,7 @@ if __name__ == "__main__":
         snakemake = mock_snakemake(
             "prepare_gas_network",
             simpl="",
-            clusters="4",
+            clusters="9",
         )
 
     # configure_logging(snakemake)
@@ -915,14 +915,16 @@ if not snakemake.params.custom_gas_network:
             pipelines, bus_regions_onshore, length_factor=1.25
         )
 
+        ## This was commented out, let us take it in again
         # Conversion of GADM id to from 3 to 2-digit
-        # pipelines["bus0"] = pipelines["bus0"].apply(
-        #     lambda id: three_2_two_digits_country(id[:3]) + id[3:]
-        # )
+        pipelines["bus0"] = pipelines["bus0"].apply(
+            lambda id: three_2_two_digits_country(id[:3]) + id[3:]
+        )
 
-        # pipelines["bus1"] = pipelines["bus1"].apply(
-        #     lambda id: three_2_two_digits_country(id[:3]) + id[3:]
-        # )
+        pipelines["bus1"] = pipelines["bus1"].apply(
+            lambda id: three_2_two_digits_country(id[:3]) + id[3:]
+        )
+        ## End of test
 
         pipelines.to_csv(snakemake.output.clustered_gas_network, index=False)
 
