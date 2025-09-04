@@ -209,9 +209,9 @@ if __name__ == "__main__":
         snakemake = mock_snakemake(
             "prepare_transport_data",
             simpl="",
-            clusters="4",
-            planning_horizons="2030",
-            demand="AB",
+            clusters="8",
+            planning_horizons="2050",
+            demand="NZ",
         )
 
     n = pypsa.Network(snakemake.input.network)
