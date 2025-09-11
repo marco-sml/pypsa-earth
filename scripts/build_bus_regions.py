@@ -266,10 +266,23 @@ if __name__ == "__main__":
         ]
         isolated_regions = onshore_regions[onshore_regions.name.isin(isolated_buses)]
 
+        ## GADM FIX
+
+        # before drop_duplicates
+        dummy_mask = onshore_regions['name'].str.startswith('dummy_')
+        real_mask = ~dummy_mask
+
+        onshore_regions = pd.concat([
+            onshore_regions[real_mask].drop_duplicates("shape_id", keep="first"),
+            onshore_regions[dummy_mask]
+        ], ignore_index=True)
+
         # Combine regions while prioritizing non-isolated ones
-        onshore_regions = pd.concat(
-            [non_isolated_regions, isolated_regions]
-        ).drop_duplicates("shape_id", keep="first")
+        # onshore_regions = pd.concat(
+        #     [non_isolated_regions, isolated_regions]
+        # ).drop_duplicates("shape_id", keep="first")
+
+        ## END GADM FIX
 
         if len(onshore_regions) < len(gadm_country):
             logger.warning(

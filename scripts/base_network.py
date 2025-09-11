@@ -68,6 +68,11 @@ import shapely.wkt
 from _helpers import configure_logging, create_logger, read_csv_nafix
 from shapely.ops import unary_union
 
+# Bugfix GADM
+import copy
+from shapely.geometry import Point
+
+
 logger = create_logger(__name__)
 
 
@@ -533,6 +538,46 @@ def base_network(
 
     _set_dc_underwater_fraction(n.lines, inputs.offshore_shapes)
     _set_dc_underwater_fraction(n.links, inputs.offshore_shapes)
+
+    # TRY: Avoid administrative regions without substations and therefore without buses
+
+    # Ensure geometry column exists and contains valid Point objects
+    #if "geometry" not in n.buses or not all(n.buses.geometry.apply(lambda g: isinstance(g, Point))):
+    n.buses.drop(columns="geometry", inplace=True)
+    n.buses["geometry"] = n.buses.apply(lambda row: Point(row["x"], row["y"]), axis=1)
+
+    bus_geom = gpd.GeoSeries(n.buses.geometry, crs="EPSG:4326")
+
+    # Load GADM shapes
+    gadm_shapes = gpd.read_file(inputs.gadm_shapes).set_index("GADM_ID")
+
+    for region_id, region in gadm_shapes.iterrows():
+        # Check if any bus is within this region
+        buses_in_region = bus_geom.loc[bus_geom.within(region.geometry)]
+
+        if buses_in_region.empty:
+            # Duplicate last bus
+            last_bus = n.buses.iloc[-1].copy()
+            dummy_bus_name = f"dummy_{region_id}"
+            centroid = region.geometry.centroid
+
+            # Modify name and coordinates
+            last_bus.name = dummy_bus_name
+            last_bus.x = centroid.x
+            last_bus.y = centroid.y
+            last_bus.country = region.get("country", None)
+            last_bus.carrier = "AC"
+            last_bus.v_nom = 220.0
+            last_bus.under_construction = False
+            last_bus.substation_lv = True
+
+            # Append to buses
+            n.buses = pd.concat([n.buses, pd.DataFrame([last_bus])], ignore_index=True)
+            bus_geom = gpd.GeoSeries([Point(xy) for xy in zip(n.buses.x, n.buses.y)], crs="EPSG:4326")
+
+            logger.info(f"Duplicated last bus as dummy {dummy_bus_name} for empty region {region_id}")
+
+    # End of TRY
 
     return n
 
