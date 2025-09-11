@@ -41,7 +41,7 @@ if __name__ == "__main__":
         snakemake = mock_snakemake(
             "prepare_gas_network",
             simpl="",
-            clusters="9",
+            clusters="25",
         )
 
     # configure_logging(snakemake)
@@ -907,6 +907,10 @@ if not snakemake.params.custom_gas_network:
 
     pipelines = parse_states(pipelines, bus_regions_onshore)
 
+    # Debugging
+    # bus_regions_onshore.to_file("bus_regions_onshore.geojson", driver="GeoJSON")
+    # pipelines.to_csv("pipelines_parsed.csv")
+
     if len(pipelines.loc[pipelines.amount_states_passed >= 2]) > 0:
         # TODO: plotting should be a extra rule!
         # plot_gas_network(pipelines, country_borders, bus_regions_onshore)
@@ -916,14 +920,16 @@ if not snakemake.params.custom_gas_network:
         )
 
         ## This was commented out, let us take it in again
+        ## Voronoi try: Comment it out again
         # Conversion of GADM id to from 3 to 2-digit
-        pipelines["bus0"] = pipelines["bus0"].apply(
-            lambda id: three_2_two_digits_country(id[:3]) + id[3:]
-        )
+        # pipelines["bus0"] = pipelines["bus0"].apply(
+        #     lambda id: three_2_two_digits_country(id[:3]) + id[3:]
+        # )
 
-        pipelines["bus1"] = pipelines["bus1"].apply(
-            lambda id: three_2_two_digits_country(id[:3]) + id[3:]
-        )
+        # pipelines["bus1"] = pipelines["bus1"].apply(
+        #     lambda id: three_2_two_digits_country(id[:3]) + id[3:]
+        # )
+        ## End of Voronoi try
         ## End of test
 
         pipelines.to_csv(snakemake.output.clustered_gas_network, index=False)
