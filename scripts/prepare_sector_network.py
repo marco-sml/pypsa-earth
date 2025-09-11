@@ -492,13 +492,14 @@ def add_hydrogen(n, costs):
         h2_links = pd.read_csv(snakemake.input.pipelines)
 
         ## Try: Uncommented the following five lines to make sure that _AC is added to the bus name; otherwise the pipelines are not connected to any actual buses
+        ## Voroni Try: Comment out the following five lines again to make sure that _AC is NOT added to the bus name
 
         # Order buses to detect equal pairs for bidirectional pipelines
-        buses_ordered = h2_links.apply(lambda p: sorted([p.bus0, p.bus1]), axis=1)
+        # buses_ordered = h2_links.apply(lambda p: sorted([p.bus0, p.bus1]), axis=1)
 
         # Appending string for carrier specification '_AC'
-        h2_links["bus0"] = buses_ordered.str[0] + "_AC"
-        h2_links["bus1"] = buses_ordered.str[1] + "_AC"
+        # h2_links["bus0"] = buses_ordered.str[0] + "_AC"
+        # h2_links["bus1"] = buses_ordered.str[1] + "_AC"
 
         ## End of try
 
