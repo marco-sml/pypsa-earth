@@ -41,7 +41,7 @@ if __name__ == "__main__":
         snakemake = mock_snakemake(
             "prepare_gas_network",
             simpl="",
-            clusters="9",
+            clusters="8",
         )
 
     # configure_logging(snakemake)
@@ -565,6 +565,15 @@ def load_bus_region(onshore_path, pipelines):
         # )
         bus_regions_onshore = bus_regions_onshore.to_crs(epsg=3857)
 
+    ## TRY: Conserve regions_onshore
+
+    #bus_regions_onshore.to_file('og-bus_regions_onshore.geojson', driver='GeoJSON')
+    bus_regions_new = gpd.read_file('data/bus_regions_forPipelines.geojson')
+    bus_regions_new = bus_regions_new.to_crs(epsg=3857)
+    bus_regions_onshore = bus_regions_new
+
+    ## END OF TRY
+
     country_borders = unary_union(bus_regions_onshore.geometry)
 
     # Create a new GeoDataFrame containing the merged polygon
@@ -599,15 +608,31 @@ def get_states_in_order(pipeline, bus_regions_onshore):
                 line.interpolate(line.length)
             )  # Add the last point
             interpolated_points.extend(interpolated_points_line)
+    
+    ## TRY: Optimise check code
 
-    # Check each interpolated point against the state geometries
-    for point in interpolated_points:
-        for index, state_row in bus_regions_onshore.iterrows():
-            if state_row.geometry.contains(point):
-                gadm_id = state_row["gadm_id"]
-                if gadm_id not in states_p:
-                    states_p.append(gadm_id)
-                break  # Stop checking other states once a match is found
+    # Wrap your points into a GeoDataFrame
+    points_gdf = gpd.GeoDataFrame(
+        geometry=interpolated_points,
+        crs=bus_regions_onshore.crs
+    )
+
+    # Spatial join: assigns each point to the polygon it lies within
+    joined = gpd.sjoin(points_gdf, bus_regions_onshore, how="left", predicate="within")
+
+    # Extract gadm_id values, drop missing, keep first occurrence only
+    states_p = joined["gadm_id"].dropna().drop_duplicates().tolist()
+
+    ## END OF TRY
+
+    # # Check each interpolated point against the state geometries
+    # for point in interpolated_points:
+    #     for index, state_row in bus_regions_onshore.iterrows():
+    #         if state_row.geometry.contains(point):
+    #             gadm_id = state_row["gadm_id"]
+    #             if gadm_id not in states_p:
+    #                 states_p.append(gadm_id)
+    #             break  # Stop checking other states once a match is found
 
     return states_p
 
