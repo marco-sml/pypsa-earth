@@ -1261,7 +1261,7 @@ def gadm(
         errors="ignore",
     )
     # read the updated GADM file
-    df_gadm = gpd.read_file('data/GADM_v2.geojson')
+    df_gadm = gpd.read_file('data/GADM_v2_simplified.geojson')
 
     if worldpop_method != False:
         mem_read_limit_per_process = mem_mb / nprocesses
