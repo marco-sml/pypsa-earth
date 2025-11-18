@@ -21,7 +21,7 @@ countries: ["DZ"]
 enable:
   retrieve_databundle: false #  Recommended 'true', for the first run. Otherwise data might be missing.
   retrieve_databundle_sector: false
-  retrieve_cost_data: true # true: retrieves cost data from technology data and saves in resources/costs.csv, false: uses cost data in data/costs.csv
+  retrieve_cost_data: false # true: retrieves cost data from technology data and saves in resources/costs.csv, false: uses cost data in data/costs.csv
   download_osm_data: false # If 'true', OpenStreetMap data will be downloaded for the above given countries
   build_natura_raster: false # If True, then an exclusion raster will be build
   build_cutout: false
@@ -44,7 +44,7 @@ run:
 scenario:
   simpl: [""]
   ll: ["copt"]
-  clusters: ["22"]
+  clusters: ["23"]
   opts: [Co2L-3H]
   planning_horizons: # investment years for myopic and perfect; or costs year for overnight
   - 2050
@@ -358,6 +358,9 @@ renewable:
 # TODO: Needs to be adjusted for Africa.
 # Costs Configuration
 costs:
+  # addional wildcard to run scenrios with cutom h2 pipeline costs placed in costs="resources/" + RDIR + "costs_{planning_horizons}_{cost_scen}.csv"
+  cost_scen: ["cheap","base","medium","costly","very-costly"]
+  # end of additional wildcard
   year: 2030
   version: v0.10.0
   discountrate: [0.071] #, 0.086, 0.111]
