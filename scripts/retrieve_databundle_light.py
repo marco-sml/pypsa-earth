@@ -931,6 +931,8 @@ if __name__ == "__main__":
     hydrobasins_level = snakemake.params["hydrobasins_level"]
 
     bundles_to_download = snakemake.params["bundles_to_download"]
+    # Debugging
+    bundles_to_download.tolist().to_csv("bundles_to_download.csv")
 
     retrieve_databundle(
         bundles_to_download,

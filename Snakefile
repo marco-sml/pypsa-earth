@@ -443,7 +443,9 @@ rule build_demand_profiles:
     input:
         base_network="networks/" + RDIR + "base.nc",
         regions="resources/" + RDIR + "bus_regions/regions_onshore.geojson",
-        load=load_data_paths,
+        #load=load_data_paths,
+        # New custom load file based on Sonelgaz' 2019 load time series, scaled to match the yearly demand of GEGIS' 2050 predictions
+        load="data/custom/customised_dz_load-time-series_based-on-2019-load_Sonelgaz_abs-values-match-GEGIS_2050_pred.csv",
         #gadm_shapes="resources/" + RDIR + "shapes/MAR2.geojson",
         #using this line instead of the following will test updated gadm shapes for MA.
         #To use: downlaod file from the google drive and place it in resources/" + RDIR + "shapes/
@@ -998,9 +1000,10 @@ rule prepare_sector_networks:
     input:
         expand(
             RESDIR
-            + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{cost_scen}.nc",
+            + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{cost_scen}_{demand_scen}.nc",
             **config["scenario"],
             **config["costs"],
+            **config["demand_scen"],
         ),
 
 
@@ -1019,10 +1022,11 @@ rule solve_sector_networks:
     input:
         expand(
             RESDIR
-            + "postnetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}.nc",
+            + "postnetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_{demand_scen}.nc",
             **config["scenario"],
             **config["costs"],
             **config["export"],
+            **config["demand_scen"],
         ),
 
 
@@ -1110,7 +1114,7 @@ rule prepare_sector_network:
         h2_cavern="data/hydrogen_salt_cavern_potentials.csv",
         nodal_energy_totals="resources/"
         + SECDIR
-        + "demand/heat/nodal_energy_heat_totals_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/nodal_energy_heat_totals_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         transport="resources/"
         + SECDIR
         + "demand/transport_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
@@ -1132,24 +1136,24 @@ rule prepare_sector_network:
         + "demand/industrial_energy_demand_per_node_elec_s{simpl}_{clusters}_{planning_horizons}_{demand}.csv",
         energy_totals="resources/"
         + SECDIR
-        + "energy_totals_{demand}_{planning_horizons}.csv",
+        + "energy_totals_{demand}_{planning_horizons}_{demand_scen}.csv",
         airports="resources/" + SECDIR + "airports.csv",
         ports="resources/" + SECDIR + "ports.csv",
         heat_demand="resources/"
         + SECDIR
-        + "demand/heat/heat_demand_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/heat_demand_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         ashp_cop="resources/"
         + SECDIR
-        + "demand/heat/ashp_cop_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/ashp_cop_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         gshp_cop="resources/"
         + SECDIR
-        + "demand/heat/gshp_cop_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/gshp_cop_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         solar_thermal="resources/"
         + SECDIR
-        + "demand/heat/solar_thermal_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/solar_thermal_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         district_heat_share="resources/"
         + SECDIR
-        + "demand/heat/district_heat_share_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/district_heat_share_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         biomass_transport_costs="data/temp_hard_coded/biomass_transport_costs.csv",
         shapes_path="resources/"
         + RDIR
@@ -1163,14 +1167,14 @@ rule prepare_sector_network:
         ),
     output:
         RESDIR
-        + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{cost_scen}.nc",
+        + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{cost_scen}_{demand_scen}.nc",
     threads: 1
     resources:
         mem_mb=2000,
     benchmark:
         (
             RESDIR
-            + "benchmarks/prepare_network/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{cost_scen}.nc"
+            + "benchmarks/prepare_network/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{cost_scen}_{demand_scen}.nc"
         )
     script:
         "scripts/prepare_sector_network.py"
@@ -1203,13 +1207,13 @@ rule add_export:
         costs="resources/" + RDIR + "costs_{planning_horizons}_{cost_scen}.csv",
         ship_profile="resources/" + SECDIR + "ship_profile_{h2export}TWh.csv",
         network=RESDIR
-        + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{cost_scen}.nc",
+        + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{cost_scen}_{demand_scen}.nc",
         shapes_path="resources/"
         + RDIR
         + "bus_regions/regions_onshore_elec_s{simpl}_{clusters}.geojson",
     output:
         RESDIR
-        + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}.nc",
+        + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_{demand_scen}.nc",
     script:
         "scripts/add_export.py"
 
@@ -1362,22 +1366,22 @@ rule prepare_heat_data:
     output:
         nodal_energy_totals="resources/"
         + SECDIR
-        + "demand/heat/nodal_energy_heat_totals_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/nodal_energy_heat_totals_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         heat_demand="resources/"
         + SECDIR
-        + "demand/heat/heat_demand_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/heat_demand_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         ashp_cop="resources/"
         + SECDIR
-        + "demand/heat/ashp_cop_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/ashp_cop_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         gshp_cop="resources/"
         + SECDIR
-        + "demand/heat/gshp_cop_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/gshp_cop_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         solar_thermal="resources/"
         + SECDIR
-        + "demand/heat/solar_thermal_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/solar_thermal_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
         district_heat_share="resources/"
         + SECDIR
-        + "demand/heat/district_heat_share_{demand}_s{simpl}_{clusters}_{planning_horizons}.csv",
+        + "demand/heat/district_heat_share_{demand}_s{simpl}_{clusters}_{planning_horizons}_{demand_scen}.csv",
     script:
         "scripts/prepare_heat_data.py"
 
@@ -1406,13 +1410,17 @@ rule prepare_energy_totals:
     input:
         unsd_paths="resources/" + SECDIR + "energy_totals_base.csv",
         efficiency_gains_cagr="data/demand/efficiency_gains_cagr.csv",
-        growth_factors_cagr="data/demand/growth_factors_cagr.csv",
+        # new wildcard {demand_scen} for different growth scenarios
+        growth_factors_cagr="data/custom/growth_factors_cagr_{demand_scen}.csv",
+        #growth_factors_cagr="data/demand/growth_factors_cagr.csv",
         district_heating="data/demand/district_heating.csv",
-        fuel_shares="data/demand/fuel_shares.csv",
+        # new wildcard {demand_scen} for different growth scenarios
+        fuel_shares="data/custom/fuel_shares_{demand_scen}.csv",
+        #fuel_shares="data/demand/fuel_shares.csv",
     output:
         energy_totals="resources/"
         + SECDIR
-        + "energy_totals_{demand}_{planning_horizons}.csv",
+        + "energy_totals_{demand}_{planning_horizons}_{demand_scen}.csv",
     script:
         "scripts/prepare_energy_totals.py"
 
@@ -1666,28 +1674,28 @@ if config["foresight"] == "overnight":
             # network=RESDIR
             # + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}.nc",
             network=RESDIR
-            + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}.nc",
+            + "prenetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_{demand_scen}.nc",
             costs="resources/" + RDIR + "costs_{planning_horizons}_{cost_scen}.csv",
             configs=SDIR + "configs/config.yaml",  # included to trigger copy_config rule
         output:
             RESDIR
-            + "postnetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}.nc",
+            + "postnetworks/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_{demand_scen}.nc",
         shadow:
             "copy-minimal" if os.name == "nt" else "shallow"
         log:
             solver=RESDIR
-            + "logs/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_solver.log",
+            + "logs/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_{demand_scen}_solver.log",
             python=RESDIR
-            + "logs/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_python.log",
+            + "logs/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_{demand_scen}_python.log",
             memory=RESDIR
-            + "logs/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_memory.log",
+            + "logs/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_{demand_scen}_memory.log",
         threads: 25
         resources:
             mem_mb=config["solving"]["mem"],
         benchmark:
             (
                 RESDIR
-                + "benchmarks/solve_network/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}.nc"
+                + "benchmarks/solve_network/elec_s{simpl}_{clusters}_ec_l{ll}_{opts}_{sopts}_{planning_horizons}_{discountrate}_{demand}_{h2export}export_{cost_scen}_{demand_scen}.nc"
             )
         script:
             "scripts/solve_network.py"

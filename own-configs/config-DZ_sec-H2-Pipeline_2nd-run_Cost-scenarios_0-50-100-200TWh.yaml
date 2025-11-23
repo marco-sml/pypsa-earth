@@ -731,7 +731,7 @@ solving:
       parallel: "on"
       random_seed: 123
     gurobi-default:
-      threads: 30 # a bit more, before: 24; more conservative approach; before: 32 # in config.default.yaml it was 4
+      threads: 24 # maximum physical cores: 28; more conservative approach; before: 32 # in config.default.yaml it was 4
       method: 2 # barrier
       crossover: 0
       BarConvTol: 1.e-6
