@@ -445,7 +445,7 @@ rule build_demand_profiles:
         regions="resources/" + RDIR + "bus_regions/regions_onshore.geojson",
         #load=load_data_paths,
         # New custom load file based on Sonelgaz' 2019 load time series, scaled to match the yearly demand of GEGIS' 2050 predictions
-        load="data/custom/customised_dz_load-time-series_based-on-2019-load_Sonelgaz_abs-values-match-GEGIS_2050_pred.csv",
+        load=["data/custom/customised_dz_load-time-series_based-on-2019-load_Sonelgaz_abs-values-match-GEGIS_2050_pred.csv"],
         #gadm_shapes="resources/" + RDIR + "shapes/MAR2.geojson",
         #using this line instead of the following will test updated gadm shapes for MA.
         #To use: downlaod file from the google drive and place it in resources/" + RDIR + "shapes/

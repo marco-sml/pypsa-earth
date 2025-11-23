@@ -161,8 +161,12 @@ def shapes_to_shapes(orig, dest):
 
 
 def load_demand_csv(path):
-    df = read_csv_nafix(path, sep=";")
+    # df = read_csv_nafix(path, sep=";")
+    # Sun, 23/11/2025 02:00: Change sep from ';' to ','
+    df = read_csv_nafix(path, sep=",")
     df.time = pd.to_datetime(df.time, format="%Y-%m-%d %H:%M:%S")
+    # Sun, 23/11/2025 02:00: Change datetime format to fortmat='format'
+    # df.time = pd.to_datetime(df.time, format="format")
     load_regions = {c: n for c, n in zip(df.region_code, df.region_name)}
 
     gegis_load = df.set_index(["region_code", "time"]).to_xarray()
