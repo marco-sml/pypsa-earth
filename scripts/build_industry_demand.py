@@ -54,9 +54,9 @@ if __name__ == "__main__":
         snakemake = mock_snakemake(
             "build_industry_demand",
             simpl="",
-            clusters="4",
-            planning_horizons=2030,
-            demand="AB",
+            clusters="28",
+            planning_horizons=2050,
+            demand="NZ",
         )
 
     countries = snakemake.params.countries
@@ -289,6 +289,11 @@ if __name__ == "__main__":
                 pass
         industry_base_totals = industry_base_totals.sort_index()
 
+        # Debugging: Eport industry_base_totals before filling missing carriers
+        # industry_base_totals.to_csv(
+        #     "industry_base_totals_debug_before_filling.csv"
+        # )
+
         all_carriers = [
             "electricity",
             "gas",
@@ -315,6 +320,10 @@ if __name__ == "__main__":
             )
             industry_base_totals.drop(columns=other_cols, inplace=True)
 
+        # Debugging: Export industry_base_totals after filling missing carriers
+        # industry_base_totals.to_csv(
+        #     "industry_base_totals_debug_after_filling.csv"
+        # )
         nodal_df = pd.DataFrame()
 
         for country in countries:
